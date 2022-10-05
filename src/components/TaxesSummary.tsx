@@ -1,29 +1,35 @@
 import React, { useMemo } from 'react';
 import { Box, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
-import taxesService, { IncomeTaxesResult, TaxationFamilyContext, TaxBracketResult } from '../services/TaxesService';
+import taxesService, { IncomeTaxesSummary, TaxationFamilyContext, TaxBracketSummary } from '../services/TaxesService';
 import Percentage from './Percentage';
 import Euro from './Euro';
 import ParameterBox from './ParameterBox';
+import { YearSummary } from '../services/ParametersService';
+import { useAppSelector } from '../redux/hooks';
+import { selectYearSummary } from '../redux/slices/FinancialSlice';
+import { ParametersState, selectParameters } from '../redux/slices/ParametersSlice';
+import TableCellBold from './TableCellBold';
 
-export type TaxesSummaryProps = {
-    referenceIncome: number;
-};
+function TaxesSummary() {
+    const yearSummary: YearSummary = useAppSelector(selectYearSummary);
+    const parameters: ParametersState = useAppSelector(selectParameters);
 
-function TaxesSummary({ referenceIncome }: TaxesSummaryProps) {
-    const taxationFamilyContext: TaxationFamilyContext = useMemo<TaxationFamilyContext>(
-        () => taxesService.getTaxationFamilyContext(),
-        [],
+    const taxationFamilyContext: TaxationFamilyContext = parameters.taxationFamilyContext;
+
+    const incomeTaxesResult: IncomeTaxesSummary = useMemo<IncomeTaxesSummary>(
+        () => taxesService.getTaxes(yearSummary.totals.revenue, taxationFamilyContext),
+        [yearSummary, taxationFamilyContext],
     );
-    const incomeTaxesResult: IncomeTaxesResult = useMemo<IncomeTaxesResult>(
-        () => taxesService.getTaxes(referenceIncome, taxationFamilyContext),
-        [referenceIncome, taxationFamilyContext],
-    );
+
     return (
         <Paper>
             <Box sx={{ display: 'flex', justifyContent: 'space-evenly' }}>
-                <ParameterBox title="TJM" value={<Euro cents={false}>{500}</Euro>} />
+                <ParameterBox title="TJM" value={<Euro cents={false}>{parameters.averageDailyRate}</Euro>} />
+                <ParameterBox
+                    title="Revenus entreprise"
+                    value={<Euro cents={false}>{yearSummary?.totals.revenue}</Euro>}
+                />
                 <ParameterBox title="Nombre de parts" value={taxationFamilyContext.incomeSplittingParts + ' parts'} />
-                <ParameterBox title="Revenus entreprise" value={<Euro cents={false}>{500}</Euro>} />
                 <ParameterBox
                     title="Revenus famillaux"
                     value={<Euro cents={false}>{taxationFamilyContext.taxableHouseholdRevenues}</Euro>}
@@ -33,13 +39,13 @@ function TaxesSummary({ referenceIncome }: TaxesSummaryProps) {
                 <Table size="small">
                     <TableHead>
                         <TableRow>
-                            <TableCell>Tranche imposition</TableCell>
-                            <TableCell align="right">Taux imposition</TableCell>
-                            <TableCell align="right">montant par tranche</TableCell>
+                            <TableCellBold>Tranche imposition</TableCellBold>
+                            <TableCellBold align="right">Taux imposition</TableCellBold>
+                            <TableCellBold align="right">montant par tranche</TableCellBold>
                         </TableRow>
                     </TableHead>
                     <TableBody>
-                        {incomeTaxesResult.taxesBrackets.map((taxBracketResult: TaxBracketResult) => (
+                        {incomeTaxesResult.taxesBrackets.map((taxBracketResult: TaxBracketSummary) => (
                             <TableRow
                                 key={taxBracketResult.bracket.bottomBracket + '-' + taxBracketResult.bracket.topBracket}
                                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
@@ -58,12 +64,12 @@ function TaxesSummary({ referenceIncome }: TaxesSummaryProps) {
                             </TableRow>
                         ))}
                         <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
-                            <TableCell component="th" scope="row">
+                            <TableCellBold component="th" scope="row">
                                 Total
-                            </TableCell>
-                            <TableCell align="right" colSpan={2}>
+                            </TableCellBold>
+                            <TableCellBold align="right" colSpan={2}>
                                 <Euro>{incomeTaxesResult.total}</Euro>
-                            </TableCell>
+                            </TableCellBold>
                         </TableRow>
                     </TableBody>
                 </Table>

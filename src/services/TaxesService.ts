@@ -22,15 +22,15 @@ export class TaxesService {
         return 0.1;
     }
 
-    getTaxes(contractorReferenceIncome: number, taxationFamilyContext: TaxationFamilyContext): IncomeTaxesResult {
+    getTaxes(contractorRevenue: number, taxationFamilyContext: TaxationFamilyContext): IncomeTaxesSummary {
         // Apply contractor's tax allowance
-        let taxableReferenceIncome: number = (1 - this.getContractorTaxAllowance()) * contractorReferenceIncome;
+        let taxableReferenceIncome: number = (1 - this.getContractorTaxAllowance()) * contractorRevenue;
         // Add family others revenues and apply the tax allowance
         if (taxationFamilyContext && taxationFamilyContext.taxableHouseholdRevenues > 0)
             taxableReferenceIncome +=
                 (1 - this.getFamilyTaxAllowance()) * taxationFamilyContext.taxableHouseholdRevenues;
 
-        const incomeTaxesResult: IncomeTaxesResult = {
+        const incomeTaxesSummary: IncomeTaxesSummary = {
             taxesBrackets: [],
             total: 0,
         };
@@ -44,15 +44,11 @@ export class TaxesService {
                         : taxBracket.topBracket;
                 bracketAmount = (topBracket - taxBracket.bottomBracket) * (taxBracket.rate / 100);
             } else bracketAmount = 0;
-            incomeTaxesResult.taxesBrackets.push({ bracket: taxBracket, bracketAmount });
-            incomeTaxesResult.total += bracketAmount;
+            incomeTaxesSummary.taxesBrackets.push({ bracket: taxBracket, bracketAmount });
+            incomeTaxesSummary.total += bracketAmount;
         });
 
-        return incomeTaxesResult;
-    }
-
-    getVAT(revenue: number): number {
-        return 0.2 * revenue;
+        return incomeTaxesSummary;
     }
 
     getTaxationFamilyContext(): TaxationFamilyContext {
@@ -103,12 +99,12 @@ export type TaxBracket = {
     rate: number;
 };
 
-export type IncomeTaxesResult = {
-    taxesBrackets: TaxBracketResult[];
+export type IncomeTaxesSummary = {
+    taxesBrackets: TaxBracketSummary[];
     total: number;
 };
 
-export type TaxBracketResult = {
+export type TaxBracketSummary = {
     bracket: TaxBracket;
     bracketAmount: number;
 };
