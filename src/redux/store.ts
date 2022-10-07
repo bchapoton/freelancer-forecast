@@ -1,11 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit';
 import parametersReducer from './slices/ParametersSlice';
-import financialReducer from './slices/FinancialSlice';
+import summariesReducer from './slices/SummariesSlice';
+import uiReducer from './slices/UISlice';
 
 export const store = configureStore({
     reducer: {
         parameters: parametersReducer,
-        financial: financialReducer,
+        summaries: summariesReducer,
+        ui: uiReducer,
     },
 });
 

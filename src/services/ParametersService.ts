@@ -7,7 +7,7 @@ export class ParametersService {
      *
      * @param parameters
      */
-    buildFinancialYearSummary(parameters: ParametersState): YearSummary {
+    buildYearSummary(parameters: ParametersState): YearSummary {
         const openDaysYear: OpenDayPerYear = calendarService.buildOpenDayPerYear(
             parameters.year,
             parameters.partTime,

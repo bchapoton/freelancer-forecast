@@ -2,7 +2,7 @@ import React, { Fragment, ReactNode, useEffect } from 'react';
 import { useAppDispatch, useAppSelector } from '../redux/hooks';
 import { ParametersState, selectParameters } from '../redux/slices/ParametersSlice';
 import parametersService, { YearSummary } from '../services/ParametersService';
-import { setIncomeTaxesSummary, setYearSummary } from '../redux/slices/FinancialSlice';
+import { setIncomeTaxesSummary, setYearSummary } from '../redux/slices/SummariesSlice';
 import taxesService, { IncomeTaxesSummary } from '../services/TaxesService';
 
 export type ParametersProviderProps = {
@@ -14,7 +14,7 @@ function ParametersProvider({ children }: ParametersProviderProps) {
     const dispatch = useAppDispatch();
 
     useEffect(() => {
-        const yearSummary: YearSummary = parametersService.buildFinancialYearSummary(parameters);
+        const yearSummary: YearSummary = parametersService.buildYearSummary(parameters);
         dispatch(setYearSummary(yearSummary));
         const incomeTaxesSummary: IncomeTaxesSummary = taxesService.getIncomeTaxesSummary(
             yearSummary.totals.revenue,

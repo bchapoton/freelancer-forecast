@@ -4,7 +4,7 @@ import { Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow
 import Euro from './Euro';
 import { useAppSelector } from '../redux/hooks';
 import { selectParameters } from '../redux/slices/ParametersSlice';
-import { selectYearSummary } from '../redux/slices/FinancialSlice';
+import { selectYearSummary } from '../redux/slices/SummariesSlice';
 import parametersService, { MonthSummary } from '../services/ParametersService';
 import { TableCellBold, TableRowFooter } from './TableCustomComponents';
 import moment from '../helpers/MomentHelper';

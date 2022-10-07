@@ -3,7 +3,7 @@ import { Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow
 import Euro from './Euro';
 import parametersService, { YearSummary } from '../services/ParametersService';
 import { useAppSelector } from '../redux/hooks';
-import { selectIncomeTaxesSummary, selectYearSummary } from '../redux/slices/FinancialSlice';
+import { selectIncomeTaxesSummary, selectYearSummary } from '../redux/slices/SummariesSlice';
 import { ParametersState, selectParameters } from '../redux/slices/ParametersSlice';
 import { IncomeTaxesSummary } from '../services/TaxesService';
 

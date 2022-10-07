@@ -3,14 +3,14 @@ import { RootState } from '../store';
 import parametersService, { TotalSummary, YearSummary } from '../../services/ParametersService';
 import { IncomeTaxesSummary } from '../../services/TaxesService';
 
-export interface FinancialState {
+export interface SummariesState {
     yearSummary: YearSummary;
     incomeTaxesSummary: IncomeTaxesSummary;
 }
 
 const emptyTotals: TotalSummary = parametersService.buildEmptyTotalSummary();
 
-const initialState: FinancialState = {
+const initialState: SummariesState = {
     yearSummary: { monthSummaries: [], totals: emptyTotals },
     incomeTaxesSummary: {
         taxBracketSummaries: [],
@@ -24,8 +24,8 @@ const initialState: FinancialState = {
     },
 };
 
-export const financialSlice = createSlice({
-    name: 'financial',
+export const summariesSlice = createSlice({
+    name: 'summaries',
     initialState,
     reducers: {
         setYearSummary: (state, action: PayloadAction<YearSummary>) => {
@@ -37,10 +37,10 @@ export const financialSlice = createSlice({
     },
 });
 
-export const { setYearSummary, setIncomeTaxesSummary } = financialSlice.actions;
+export const { setYearSummary, setIncomeTaxesSummary } = summariesSlice.actions;
 
-export const selectYearSummary: (state: RootState) => YearSummary = (state: RootState) => state.financial.yearSummary;
+export const selectYearSummary: (state: RootState) => YearSummary = (state: RootState) => state.summaries.yearSummary;
 export const selectIncomeTaxesSummary: (state: RootState) => IncomeTaxesSummary = (state: RootState) =>
-    state.financial.incomeTaxesSummary;
+    state.summaries.incomeTaxesSummary;
 
-export default financialSlice.reducer;
+export default summariesSlice.reducer;
