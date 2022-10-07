@@ -1,11 +1,19 @@
 import moment from 'moment';
 
 export class CalendarService {
+    /**
+     * Build OpenDayPerYear according to the partTimeContext, dayOffContext and closed days policies
+     *
+     * @param year target year
+     * @param partTimeContext part time policies
+     * @param dayOffContext day off policies
+     * @param nonWorkingDays non-working day of the week
+     */
     buildOpenDayPerYear(
         year: number,
         partTimeContext: PartTimeContext,
         dayOffContext: DayOffContext,
-        closedDays: DAYS[] = [DAYS.SATURDAY, DAYS.SUNDAY],
+        nonWorkingDays: DAY[] = [DAY.SATURDAY, DAY.SUNDAY],
     ): OpenDayPerYear {
         const result: OpenDayPerYear = {
             year,
@@ -13,12 +21,12 @@ export class CalendarService {
             openDayPerMonths: [],
         };
 
-        const offDaysPerMonth = this.distributeDayOffPerMonth(dayOffContext);
+        const offDaysPerMonth: number[] = this.distributeDayOffPerMonth(dayOffContext);
 
         for (let i = 0; i <= 11; i++) {
-            const currentOpenDayTotal: number = this.calculateOpenDaysInMonth(year, i, closedDays);
-            const partTimedDays = this.convertPartTimeToDays(currentOpenDayTotal, partTimeContext);
-            const workedDays = partTimedDays - offDaysPerMonth[i];
+            const currentOpenDayTotal: number = this.calculateOpenDaysInMonth(year, i, nonWorkingDays);
+            const partTimedDays: number = this.convertPartTimeToDays(currentOpenDayTotal, partTimeContext);
+            const workedDays: number = partTimedDays - offDaysPerMonth[i];
             result.total += workedDays;
             result.openDayPerMonths.push({
                 total: workedDays,
@@ -54,7 +62,7 @@ export class CalendarService {
      * @param month target month (from Date : An integer between 0 and 11 representing the months January through December.)
      * @param closedDays closed days within the week
      */
-    calculateOpenDaysInMonth(year: number, month: number, closedDays: DAYS[] = [DAYS.SATURDAY, DAYS.SUNDAY]): number {
+    calculateOpenDaysInMonth(year: number, month: number, closedDays: DAY[] = [DAY.SATURDAY, DAY.SUNDAY]): number {
         let result: number = 0;
         const date: Date = new Date();
         date.setFullYear(year, month, 1);
@@ -69,18 +77,11 @@ export class CalendarService {
     /**
      * Calculate how many days in a year represents the dayOffContext
      *
-     * @param dayOffContext the dayOffContext to convert. In month unit we round a month to 22 days (include closed days).
-     * @param closedDays represent the closed days within a week.
+     * @param dayOffContext the dayOffContext to convert.
+     * @param nonWorkingDays represent the closed days within a week.
      */
-    convertDayOffToDays(dayOffContext: DayOffContext, closedDays: DAYS[] = [DAYS.SATURDAY, DAYS.SUNDAY]): number {
-        if (dayOffContext.unit === 'days') {
-            return dayOffContext.value;
-        } else if (dayOffContext.unit === 'weeks') {
-            return dayOffContext.value * (7 - closedDays.length);
-        } else if (dayOffContext.unit === 'months') {
-            return dayOffContext.value * 22;
-        }
-        return 0;
+    convertDayOffToDays(dayOffContext: DayOffContext, nonWorkingDays: DAY[] = [DAY.SATURDAY, DAY.SUNDAY]): number {
+        return dayOffContext.value * (7 - nonWorkingDays.length);
     }
 
     /**
@@ -98,13 +99,17 @@ export class CalendarService {
             return Math.round(factor * fullTimeDays + 0.5);
         }
     }
+
+    formatDayOffContext(dayOffContext: DayOffContext): string {
+        return dayOffContext.value + ' semaines';
+    }
 }
 
 const calendarService: CalendarService = new CalendarService();
 
 export default calendarService;
 
-export enum DAYS {
+export enum DAY {
     MONDAY = 0,
     TUESDAY = 1,
     WEDNESDAY = 2,
@@ -127,7 +132,7 @@ export type OpenDayPerMonth = {
 
 export type DayOffContext = {
     value: number;
-    unit: 'days' | 'weeks' | 'months';
+    unit: 'weeks';
 };
 
 export type PartTimeContext = {

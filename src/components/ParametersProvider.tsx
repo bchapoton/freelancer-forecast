@@ -2,7 +2,8 @@ import React, { Fragment, ReactNode, useEffect } from 'react';
 import { useAppDispatch, useAppSelector } from '../redux/hooks';
 import { ParametersState, selectParameters } from '../redux/slices/ParametersSlice';
 import parametersService, { YearSummary } from '../services/ParametersService';
-import { setYearSummary } from '../redux/slices/FinancialSlice';
+import { setIncomeTaxesSummary, setYearSummary } from '../redux/slices/FinancialSlice';
+import taxesService, { IncomeTaxesSummary } from '../services/TaxesService';
 
 export type ParametersProviderProps = {
     children: ReactNode;
@@ -15,6 +16,12 @@ function ParametersProvider({ children }: ParametersProviderProps) {
     useEffect(() => {
         const yearSummary: YearSummary = parametersService.buildFinancialYearSummary(parameters);
         dispatch(setYearSummary(yearSummary));
+        const incomeTaxesSummary: IncomeTaxesSummary = taxesService.getIncomeTaxesSummary(
+            yearSummary.totals.revenue,
+            parameters.taxAllowance,
+            parameters.taxationFamilyContext,
+        );
+        dispatch(setIncomeTaxesSummary(incomeTaxesSummary));
     }, [parameters]);
 
     return <Fragment>{children}</Fragment>;

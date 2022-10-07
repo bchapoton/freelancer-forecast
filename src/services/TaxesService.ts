@@ -1,41 +1,48 @@
 export class TaxesService {
-    getTaxBrackets(incomeSplittingParts: number = 1): TaxBracket[] {
-        if (incomeSplittingParts > 1) {
-            return taxBrackets.map((taxBracket: TaxBracket) => {
-                const adjustBracket: TaxBracket = { ...taxBracket };
-                adjustBracket.bottomBracket = adjustBracket.bottomBracket * incomeSplittingParts;
-                adjustBracket.topBracket =
-                    adjustBracket.topBracket === undefined
-                        ? undefined
-                        : adjustBracket.topBracket * incomeSplittingParts;
-                return adjustBracket;
-            });
-        }
+    /**
+     * Get tax brackets object
+     */
+    getTaxBrackets(): TaxBracket[] {
         return taxBrackets;
     }
 
-    getContractorTaxAllowance(): number {
-        return 0.34;
-    }
-
-    getFamilyTaxAllowance(): number {
-        return 0.1;
-    }
-
-    getTaxes(contractorRevenue: number, taxationFamilyContext: TaxationFamilyContext): IncomeTaxesSummary {
+    /**
+     * Build income taxes summary
+     *
+     * @param contractorRevenue
+     * @param contractorTaxAllowance tax allowance for the company. i.e. 34 (for 34%)
+     * @param taxationFamilyContext taxation family context
+     */
+    getIncomeTaxesSummary(
+        contractorRevenue: number,
+        contractorTaxAllowance: number,
+        taxationFamilyContext: TaxationFamilyContext,
+    ): IncomeTaxesSummary {
         // Apply contractor's tax allowance
-        let taxableReferenceIncome: number = (1 - this.getContractorTaxAllowance()) * contractorRevenue;
+        const contractorNetTaxableIncome: number = (1 - contractorTaxAllowance / 100) * contractorRevenue;
+        let familyNetTaxableIncome: number = 0;
         // Add family others revenues and apply the tax allowance
         if (taxationFamilyContext && taxationFamilyContext.taxableHouseholdRevenues > 0)
-            taxableReferenceIncome +=
-                (1 - this.getFamilyTaxAllowance()) * taxationFamilyContext.taxableHouseholdRevenues;
+            familyNetTaxableIncome =
+                (1 - taxationFamilyContext.taxAllowance / 100) * taxationFamilyContext.taxableHouseholdRevenues;
+
+        let taxableReferenceIncome: number = contractorNetTaxableIncome + familyNetTaxableIncome;
+        if (taxationFamilyContext.incomeSplittingParts > 0) {
+            taxableReferenceIncome = taxableReferenceIncome / taxationFamilyContext.incomeSplittingParts;
+        }
 
         const incomeTaxesSummary: IncomeTaxesSummary = {
-            taxesBrackets: [],
+            taxBracketSummaries: [],
+            netTaxableIncome: {
+                contractorNetTaxableIncome,
+                familyNetTaxableIncome,
+                incomeSplittingParts: taxationFamilyContext.incomeSplittingParts,
+                netTaxableIncomeResult: taxableReferenceIncome,
+            },
             total: 0,
         };
 
-        this.getTaxBrackets(taxationFamilyContext.incomeSplittingParts).forEach((taxBracket: TaxBracket) => {
+        this.getTaxBrackets().forEach((taxBracket: TaxBracket) => {
             let bracketAmount: number;
             if (taxableReferenceIncome >= taxBracket.bottomBracket) {
                 const topBracket =
@@ -44,15 +51,11 @@ export class TaxesService {
                         : taxBracket.topBracket;
                 bracketAmount = (topBracket - taxBracket.bottomBracket) * (taxBracket.rate / 100);
             } else bracketAmount = 0;
-            incomeTaxesSummary.taxesBrackets.push({ bracket: taxBracket, bracketAmount });
+            incomeTaxesSummary.taxBracketSummaries.push({ bracket: taxBracket, amount: bracketAmount });
             incomeTaxesSummary.total += bracketAmount;
         });
 
         return incomeTaxesSummary;
-    }
-
-    getTaxationFamilyContext(): TaxationFamilyContext {
-        return { incomeSplittingParts: 3, taxableHouseholdRevenues: 26000 };
     }
 }
 
@@ -60,6 +63,9 @@ const taxesService: TaxesService = new TaxesService();
 
 export default taxesService;
 
+/**
+ * Tax brackets 2022 from https://www.service-public.fr/particuliers/vosdroits/F1419
+ */
 const taxBrackets: TaxBracket[] = [
     {
         bottomBracket: 0,
@@ -99,17 +105,50 @@ export type TaxBracket = {
     rate: number;
 };
 
+export type NetTaxableIncome = {
+    /**
+     * The contractor's net taxable income after tax allowance was applied
+     */
+    contractorNetTaxableIncome: number;
+    /**
+     * The family's net taxable income after tax allowance was applied
+     */
+    familyNetTaxableIncome: number;
+    /**
+     * The family income splitting part
+     */
+    incomeSplittingParts: number;
+    /**
+     * The net taxable income merged with family and contractor net taxable income, divided by the income splitting parts
+     */
+    netTaxableIncomeResult: number;
+};
+
+/**
+ * Hold taxBracketSummaries for each bracket, and the total of it
+ */
 export type IncomeTaxesSummary = {
-    taxesBrackets: TaxBracketSummary[];
+    taxBracketSummaries: TaxBracketSummary[];
+    netTaxableIncome: NetTaxableIncome;
     total: number;
 };
 
+/**
+ * Hold amount of tax on the bracket
+ */
 export type TaxBracketSummary = {
     bracket: TaxBracket;
-    bracketAmount: number;
+    amount: number;
 };
 
+/**
+ * Family situation
+ */
 export type TaxationFamilyContext = {
     incomeSplittingParts: number;
     taxableHouseholdRevenues: number;
+    /**
+     * Tax allowance percentage. i.e. 10
+     */
+    taxAllowance: number;
 };

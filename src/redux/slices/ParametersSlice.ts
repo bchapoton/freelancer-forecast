@@ -7,6 +7,7 @@ export interface ParametersState {
     averageDailyRate: number;
     year: number;
     vatRate: number;
+    taxAllowance: number;
     socialContribution: SocialContribution[];
     taxationFamilyContext: TaxationFamilyContext;
     saving: Saving;
@@ -18,13 +19,15 @@ const initialState: ParametersState = {
     averageDailyRate: 550,
     year: 2022,
     vatRate: 20,
+    taxAllowance: 34,
     socialContribution: [
-        { rate: 22.2, label: 'social 1' },
-        { rate: 0.2, label: 'social 2' },
+        { rate: 22.2, label: 'Prestations de services (bnc et bic) et vente de marchandises (bic)' },
+        { rate: 0.2, label: 'Formation prof.liberale obligatoire' },
     ],
     taxationFamilyContext: {
         incomeSplittingParts: 3,
         taxableHouseholdRevenues: 24506,
+        taxAllowance: 10,
     },
     saving: { mode: 'percentage', value: 20 },
     partTime: { percentage: 100 },

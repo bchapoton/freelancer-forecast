@@ -2,6 +2,11 @@ import { ParametersState, Saving, SocialContribution } from '../redux/slices/Par
 import calendarService, { OpenDayPerMonth, OpenDayPerYear } from './CalendarService';
 
 export class ParametersService {
+    /**
+     * Calculate financial report from the contractor parameters
+     *
+     * @param parameters
+     */
     buildFinancialYearSummary(parameters: ParametersState): YearSummary {
         const openDaysYear: OpenDayPerYear = calendarService.buildOpenDayPerYear(
             parameters.year,
@@ -42,18 +47,34 @@ export class ParametersService {
         return { monthSummaries: monthSummaries, totals: totalSummary };
     }
 
+    /**
+     * Apply VAT on revenue
+     * @param revenue
+     * @param rate
+     */
     calculateVAT(revenue: number, rate: number): number {
         return revenue * (rate / 100);
     }
 
-    calculateSocialContributions(revenue: number, socialContribution: SocialContribution[]): number {
-        const rate: number = this.calculateSocialContributionsRate(socialContribution);
+    /**
+     * Apply social contributions on revenue
+     *
+     * @param revenue
+     * @param socialContributions
+     */
+    calculateSocialContributions(revenue: number, socialContributions: SocialContribution[]): number {
+        const rate: number = this.calculateSocialContributionsRate(socialContributions);
         return revenue * (rate / 100);
     }
 
-    calculateSocialContributionsRate(socialContribution: SocialContribution[]): number {
+    /**
+     * Merge SocialContribution in a single rate
+     *
+     * @param socialContributions
+     */
+    calculateSocialContributionsRate(socialContributions: SocialContribution[]): number {
         let rate: number = 0;
-        socialContribution.forEach((socialContribution: SocialContribution) => (rate += socialContribution.rate));
+        socialContributions.forEach((socialContribution: SocialContribution) => (rate += socialContribution.rate));
         return rate;
     }
 
@@ -68,6 +89,12 @@ export class ParametersService {
         };
     }
 
+    /**
+     * Apply saving policies on revenue
+     *
+     * @param revenue base revenue
+     * @param saving saving policies
+     */
     calculateSaving(revenue: number, saving: Saving): number {
         if (saving.mode === 'value') return Math.max(revenue, saving.value);
         else if (saving.mode === 'percentage') return revenue * (saving.value / 100);
@@ -79,7 +106,10 @@ const parametersService: ParametersService = new ParametersService();
 
 export default parametersService;
 
-export type BaseParent = {
+/**
+ * Common properties in MonthSummary and TotalSummary
+ */
+type BaseParentSummary = {
     totalDays: number;
     revenue: number;
     vat: number;
@@ -88,12 +118,24 @@ export type BaseParent = {
     profits: number;
 };
 
-export type MonthSummary = BaseParent & {
+/**
+ * Financial summary on month scope
+ */
+export type MonthSummary = BaseParentSummary & {
+    /**
+     * month index from Date (0 - 11)
+     */
     month: number;
 };
 
-export type TotalSummary = BaseParent;
+/**
+ * Total summary of a year
+ */
+export type TotalSummary = BaseParentSummary;
 
+/**
+ * Hold monthSummaries and reduce them into TotalSummary
+ */
 export type YearSummary = {
     monthSummaries: MonthSummary[];
     totals: TotalSummary;
