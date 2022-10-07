@@ -42,11 +42,11 @@ moment.locale('fr', {
         yy: '%d ans',
     },
     dayOfMonthOrdinalParse: /\d{1,2}(er|e)/,
-    ordinal: function (number) {
+    ordinal: function (number: number) {
         return number + (number === 1 ? 'er' : 'e');
     },
     meridiemParse: /PD|MD/,
-    isPM: function (input) {
+    isPM: function (input: string) {
         return input.charAt(0) === 'M';
     },
     // In case the meridiem units are not separated around 12, then implement
@@ -56,11 +56,11 @@ moment.locale('fr', {
     // },
     /* ignore eslint unused var this object come from moment documentation, probably used behind the scene */
     /* eslint-disable @typescript-eslint/no-unused-vars */
-    meridiem: function (hours, minutes, isLower) {
+    meridiem: function (hours: number, minutes: number, isLower: boolean) {
         return hours < 12 ? 'PD' : 'MD';
     },
     week: {
-        dow: 1, // Monday is the first day of the week.
+        dow: 0, // keep sunday for the first day of the week
         doy: 4, // Used to determine first week of the year.
     },
 });

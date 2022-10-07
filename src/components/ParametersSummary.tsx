@@ -7,6 +7,7 @@ import Percentage from './Percentage';
 import calendarService from '../services/CalendarService';
 import { SxProps } from '@mui/system';
 import { Theme } from '@mui/material/styles';
+import DayFormatter from './DayFormatter';
 
 function ParametersSummary() {
     const parameters = useAppSelector(selectParameters);
@@ -29,6 +30,10 @@ function ParametersSummary() {
                         { label: 'TVA', value: <Percentage>{parameters.vatRate}</Percentage> },
                         { label: 'Abattement fiscal', value: <Percentage>{parameters.taxAllowance}</Percentage> },
                         { label: "Epargne d'entreprise", value: <ParameterSaving saving={parameters.saving} /> },
+                        {
+                            label: 'Jours non ouvrable',
+                            value: <DayFormatter>{parameters.nonWorkingDays}</DayFormatter>,
+                        },
                     ]}
                 />
                 <CardParameters

@@ -42,9 +42,7 @@ function YearSummary() {
                                 return (
                                     <TableRow hover={true} key={monthSummary.month}>
                                         <TableCell variant="head" sx={{ textTransform: 'capitalize' }}>
-                                            {moment(`1/${monthSummary.month + 1}/${parameters.year}`, 'DD/MM/YYYY')
-                                                .locale('fr')
-                                                .format('MMMM')}
+                                            {moment().month(monthSummary.month).format('MMMM')}
                                         </TableCell>
                                         <TableCell align="right">{monthSummary.totalDays}</TableCell>
                                         <TableCell align="right">

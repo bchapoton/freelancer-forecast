@@ -13,7 +13,7 @@ export class CalendarService {
         year: number,
         partTimeContext: PartTimeContext,
         dayOffContext: DayOffContext,
-        nonWorkingDays: DAY[] = [DAY.SATURDAY, DAY.SUNDAY],
+        nonWorkingDays: DAY[],
     ): OpenDayPerYear {
         const result: OpenDayPerYear = {
             year,
@@ -21,7 +21,7 @@ export class CalendarService {
             openDayPerMonths: [],
         };
 
-        const offDaysPerMonth: number[] = this.distributeDayOffPerMonth(dayOffContext);
+        const offDaysPerMonth: number[] = this.distributeDayOffPerMonth(dayOffContext, partTimeContext, nonWorkingDays);
 
         for (let i = 0; i <= 11; i++) {
             const currentOpenDayTotal: number = this.calculateOpenDaysInMonth(year, i, nonWorkingDays);
@@ -40,10 +40,16 @@ export class CalendarService {
      * Distribute evenly the day off on each month, add the rest of the division on last month
      *
      * @param dayOffContext the day off context
-     * @return array of dispatched off days on each months, index is the month index
+     * @param partTimeContext the part time policies
+     * @param nonWorkingDays the non-working days within the week
+     * @return array of dispatched off days on each months, index is the month index from Date
      */
-    distributeDayOffPerMonth(dayOffContext: DayOffContext): number[] {
-        const offDays: number = this.convertDayOffToDays(dayOffContext);
+    distributeDayOffPerMonth(
+        dayOffContext: DayOffContext,
+        partTimeContext: PartTimeContext,
+        nonWorkingDays: DAY[],
+    ): number[] {
+        const offDays: number = this.convertDayOffToDays(dayOffContext, partTimeContext, nonWorkingDays);
         const dayOffPerMonth: number[] = [];
         const modulo = offDays % 12;
         const offDaysPerMonth = (offDays - (offDays % 12)) / 12;
@@ -60,15 +66,15 @@ export class CalendarService {
      *
      * @param year target year i.e. 2022
      * @param month target month (from Date : An integer between 0 and 11 representing the months January through December.)
-     * @param closedDays closed days within the week
+     * @param nonWorkingDays closed days within the week
      */
-    calculateOpenDaysInMonth(year: number, month: number, closedDays: DAY[] = [DAY.SATURDAY, DAY.SUNDAY]): number {
+    calculateOpenDaysInMonth(year: number, month: number, nonWorkingDays: DAY[]): number {
         let result: number = 0;
         const date: Date = new Date();
         date.setFullYear(year, month, 1);
         const dayInMonth = moment(date).daysInMonth();
         for (let i = 1; i <= dayInMonth; i++) {
-            if (closedDays.indexOf(date.getDay()) === -1) result++;
+            if (nonWorkingDays.indexOf(date.getDay()) === -1) result++;
             date.setDate(i + 1);
         }
         return result;
@@ -78,10 +84,14 @@ export class CalendarService {
      * Calculate how many days in a year represents the dayOffContext
      *
      * @param dayOffContext the dayOffContext to convert.
-     * @param nonWorkingDays represent the closed days within a week.
+     * @param partTimeContext the part time policies. Used for adjust the week duration
+     * @param nonWorkingDays represent the non-working days within a week.
      */
-    convertDayOffToDays(dayOffContext: DayOffContext, nonWorkingDays: DAY[] = [DAY.SATURDAY, DAY.SUNDAY]): number {
-        return dayOffContext.value * (7 - nonWorkingDays.length);
+    convertDayOffToDays(dayOffContext: DayOffContext, partTimeContext: PartTimeContext, nonWorkingDays: DAY[]): number {
+        const openedDays: number = 7 - nonWorkingDays.length;
+        // reduce the working day according to the part time policies
+        const workingDay = openedDays * (1 - partTimeContext.percentage / 100);
+        return dayOffContext.value * workingDay;
     }
 
     /**
@@ -103,6 +113,16 @@ export class CalendarService {
     formatDayOffContext(dayOffContext: DayOffContext): string {
         return dayOffContext.value + ' semaines';
     }
+
+    /**
+     * Localized and join days array
+     * @param days
+     */
+    formatDays(days: DAY[]): string {
+        const daysLocalized: string[] = [];
+        days.forEach((day: DAY) => daysLocalized.push(moment().weekday(day).format('ddd')));
+        return daysLocalized.join(', ');
+    }
 }
 
 const calendarService: CalendarService = new CalendarService();
@@ -110,13 +130,13 @@ const calendarService: CalendarService = new CalendarService();
 export default calendarService;
 
 export enum DAY {
-    MONDAY = 0,
-    TUESDAY = 1,
-    WEDNESDAY = 2,
-    THURSDAY = 3,
-    FRIDAY = 4,
-    SATURDAY = 5,
-    SUNDAY = 6,
+    SUNDAY = 0,
+    MONDAY = 1,
+    TUESDAY = 2,
+    WEDNESDAY = 3,
+    THURSDAY = 4,
+    FRIDAY = 5,
+    SATURDAY = 6,
 }
 
 export type OpenDayPerYear = {

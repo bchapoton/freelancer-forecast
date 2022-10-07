@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { RootState } from '../store';
 import { TaxationFamilyContext } from '../../services/TaxesService';
-import { DayOffContext, PartTimeContext } from '../../services/CalendarService';
+import { DAY, DayOffContext, PartTimeContext } from '../../services/CalendarService';
 
 export interface ParametersState {
     averageDailyRate: number;
@@ -13,6 +13,7 @@ export interface ParametersState {
     saving: Saving;
     partTime: PartTimeContext;
     dayOffContext: DayOffContext;
+    nonWorkingDays: DAY[];
 }
 
 const initialState: ParametersState = {
@@ -32,6 +33,7 @@ const initialState: ParametersState = {
     saving: { mode: 'percentage', value: 20 },
     partTime: { percentage: 100 },
     dayOffContext: { unit: 'weeks', value: 5 },
+    nonWorkingDays: [DAY.SATURDAY, DAY.SUNDAY],
 };
 
 export const parametersSlice = createSlice({

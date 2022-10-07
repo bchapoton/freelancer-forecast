@@ -12,6 +12,7 @@ export class ParametersService {
             parameters.year,
             parameters.partTime,
             parameters.dayOffContext,
+            parameters.nonWorkingDays,
         );
         const monthSummaries: MonthSummary[] = [];
         const totalSummary: TotalSummary = this.buildEmptyTotalSummary();
