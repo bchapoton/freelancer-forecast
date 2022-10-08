@@ -46,10 +46,45 @@ export const parametersSlice = createSlice({
         setYear: (state, action: PayloadAction<number>) => {
             state.year = action.payload;
         },
+        setVatRate: (state, action: PayloadAction<number>) => {
+            state.vatRate = action.payload;
+        },
+        setDayOffContextValue: (state, action: PayloadAction<number>) => {
+            state.dayOffContext.value = action.payload;
+        },
+        setPartTimeValue: (state, action: PayloadAction<number>) => {
+            state.partTime.percentage = action.payload;
+        },
+        setTaxationFamilySplittingParts: (state, action: PayloadAction<number>) => {
+            state.taxationFamilyContext.incomeSplittingParts = action.payload;
+        },
+        setTaxationFamilyTaxableHouseholdRevenues: (state, action: PayloadAction<number>) => {
+            state.taxationFamilyContext.taxableHouseholdRevenues = action.payload;
+        },
+        setTaxationFamilyTaxAllowance: (state, action: PayloadAction<number>) => {
+            state.taxationFamilyContext.taxAllowance = action.payload;
+        },
+        setSavingValue: (state, action: PayloadAction<number>) => {
+            state.saving.value = action.payload;
+        },
+        setTaxAllowance: (state, action: PayloadAction<number>) => {
+            state.taxAllowance = action.payload;
+        },
     },
 });
 
-export const { setAverageDailyRate, setYear } = parametersSlice.actions;
+export const {
+    setAverageDailyRate,
+    setYear,
+    setVatRate,
+    setDayOffContextValue,
+    setPartTimeValue,
+    setTaxationFamilySplittingParts,
+    setTaxationFamilyTaxableHouseholdRevenues,
+    setTaxationFamilyTaxAllowance,
+    setSavingValue,
+    setTaxAllowance,
+} = parametersSlice.actions;
 
 export const selectParameters: (state: RootState) => ParametersState = (state: RootState) => state.parameters;
 

@@ -89,8 +89,13 @@ export class CalendarService {
      */
     convertDayOffToDays(dayOffContext: DayOffContext, partTimeContext: PartTimeContext, nonWorkingDays: DAY[]): number {
         const openedDays: number = 7 - nonWorkingDays.length;
-        // reduce the working day according to the part time policies
-        const workingDay = openedDays * (1 - partTimeContext.percentage / 100);
+        let workingDay: number;
+        if (partTimeContext.percentage === 100) {
+            workingDay = openedDays;
+        } else {
+            // reduce the working day according to the part time policies
+            workingDay = openedDays * (1 - partTimeContext.percentage / 100);
+        }
         return dayOffContext.value * workingDay;
     }
 
