@@ -1,7 +1,7 @@
 import React from 'react';
 import YearSummary from './components/YearSummary';
 import TaxesSummary from './components/TaxesSummary';
-import { Box, Container, Grid } from '@mui/material';
+import { Box, Container } from '@mui/material';
 import ParametersProvider from './components/ParametersProvider';
 import ThemeWrapper from './components/ThemeWrapper';
 import ParametersSummary from './components/ParametersSummary';
@@ -15,6 +15,7 @@ import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import { useAppDispatch } from './redux/hooks';
 import { toggleParametersDrawer } from './redux/slices/UISlice';
 import ParametersDrawer from './components/ParametersDrawer';
+import { styled } from '@mui/system';
 
 function App() {
     const dispatch = useAppDispatch();
@@ -32,21 +33,21 @@ function App() {
                         </IconButton>
                     </Toolbar>
                 </AppBar>
-                <Container>
-                    <Grid container direction={'column'} spacing={2} columnSpacing={2} sx={{ mt: '10px', mb: '10px' }}>
-                        <Grid item>
+                <Container sx={{ maxWidth: '100%', overflowX: 'auto' }}>
+                    <AppContainer>
+                        <ItemContainer>
                             <ParametersSummary />
-                        </Grid>
-                        <Grid item>
+                        </ItemContainer>
+                        <ItemContainer>
                             <YearSummary />
-                        </Grid>
-                        <Grid item>
+                        </ItemContainer>
+                        <ItemContainer>
                             <TaxesSummary />
-                        </Grid>
-                        <Grid item>
+                        </ItemContainer>
+                        <ItemContainer>
                             <WageSummary />
-                        </Grid>
-                    </Grid>
+                        </ItemContainer>
+                    </AppContainer>
                 </Container>
                 <AppFooter />
                 <ParametersDrawer />
@@ -56,3 +57,15 @@ function App() {
 }
 
 export default App;
+
+const AppContainer = styled(Typography)({
+    marginTop: '10px',
+    marginBottom: '10px',
+});
+
+const ItemContainer = styled(Typography)({
+    marginTop: '5px',
+    marginBottom: '5px',
+    maxWidth: '100%',
+    overflowX: 'auto',
+});

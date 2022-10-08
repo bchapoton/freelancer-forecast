@@ -1,5 +1,15 @@
-import React, { Fragment, useMemo } from 'react';
-import { Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from '@mui/material';
+import React, { useMemo } from 'react';
+import {
+    Box,
+    Paper,
+    Table,
+    TableBody,
+    TableCell,
+    TableContainer,
+    TableHead,
+    TableRow,
+    Typography,
+} from '@mui/material';
 
 import Euro from './Euro';
 import { useAppSelector } from '../redux/hooks';
@@ -19,7 +29,7 @@ function YearSummary() {
     );
 
     return (
-        <Fragment>
+        <Box>
             <Typography gutterBottom variant="h5" component="div">
                 Facturation {parameters.year}
             </Typography>
@@ -86,7 +96,7 @@ function YearSummary() {
                     </Table>
                 </TableContainer>
             </Paper>
-        </Fragment>
+        </Box>
     );
 }
 
