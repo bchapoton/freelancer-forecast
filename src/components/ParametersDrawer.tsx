@@ -7,6 +7,7 @@ import {
     selectParameters,
     setAverageDailyRate,
     setDayOffContextValue,
+    setNonWorkingDays,
     setPartTimeValue,
     setSavingValue,
     setTaxAllowance,
@@ -15,9 +16,10 @@ import {
     setTaxationFamilyTaxAllowance,
     setVatRate,
 } from '../redux/slices/ParametersSlice';
-import { EuroField, IncomingSplittingPartsField, PercentageField, WeeksNumberField } from './forms/FormFields';
+import { EuroField, IncomingSplittingPartsField, PercentageField, WeeksNumberField } from './forms/NumberFields';
 import CloseIcon from '@mui/icons-material/Close';
 import packageJSON from '../../package.json';
+import DaysSelect from './forms/DaysSelect';
 
 function ParametersDrawer() {
     const dispatch = useAppDispatch();
@@ -55,6 +57,11 @@ function ParametersDrawer() {
                     label="Epargne d'entreprise"
                     dispatchAction={setSavingValue}
                     defaultValue={parameters.saving.value}
+                />
+                <DaysSelect
+                    label="Jours non ouvrable"
+                    dispatchAction={setNonWorkingDays}
+                    defaultValue={parameters.nonWorkingDays}
                 />
                 <Typography gutterBottom variant="h5" component="div">
                     Fiscalité entreprise

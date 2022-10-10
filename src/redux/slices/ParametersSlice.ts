@@ -70,6 +70,9 @@ export const parametersSlice = createSlice({
         setTaxAllowance: (state, action: PayloadAction<number>) => {
             state.taxAllowance = action.payload;
         },
+        setNonWorkingDays: (state, action: PayloadAction<DAY[]>) => {
+            state.nonWorkingDays = action.payload;
+        },
     },
 });
 
@@ -84,6 +87,7 @@ export const {
     setTaxationFamilyTaxAllowance,
     setSavingValue,
     setTaxAllowance,
+    setNonWorkingDays,
 } = parametersSlice.actions;
 
 export const selectParameters: (state: RootState) => ParametersState = (state: RootState) => state.parameters;

@@ -1,4 +1,4 @@
-import moment from 'moment';
+import moment from '../helpers/MomentHelper';
 
 export class CalendarService {
     /**
@@ -121,12 +121,38 @@ export class CalendarService {
 
     /**
      * Localized and join days array
-     * @param days
+     * @param days a DAY array to format
+     * @param format day format from moment
      */
-    formatDays(days: DAY[]): string {
-        const daysLocalized: string[] = [];
-        days.forEach((day: DAY) => daysLocalized.push(moment().weekday(day).format('ddd')));
+    formatDays(days: DAY[], format: 'dd' | 'ddd' | 'dddd' = 'ddd'): string {
+        const daysLocalized: string[] = days.map<string>((day: DAY) => this.formatDay(day, format));
         return daysLocalized.join(', ');
+    }
+
+    /**
+     * Localized and join days array
+     * @param day the DAY to format
+     * @param format day format from moment
+     */
+    formatDay(day: DAY, format: 'dd' | 'ddd' | 'dddd' = 'ddd'): string {
+        return moment().weekday(day).format(format);
+    }
+
+    getDaysFromNumbers(indexes: number[]): DAY[] {
+        const result: DAY[] = [];
+        indexes.forEach((index: number) => {
+            if (DayEnumWrapper[index] !== null && DayEnumWrapper[index] !== undefined)
+                result.push(DayEnumWrapper[index]);
+        });
+        return result;
+    }
+
+    getDaysFromStrings(indexes: string[]): DAY[] {
+        const result: number[] = [];
+        indexes.forEach((index: string) => {
+            if (!isNaN(parseInt(index))) result.push(parseInt(index));
+        });
+        return this.getDaysFromNumbers(result);
     }
 }
 
@@ -142,6 +168,30 @@ export enum DAY {
     THURSDAY = 4,
     FRIDAY = 5,
     SATURDAY = 6,
+}
+
+/**
+ * Workaround to map index number value to a real DAY enum value
+ * don't figured out how handle properly enum manipulation in TypeScript without type issues when handle an array of it
+ */
+const DayEnumWrapper: DAY[] = [
+    DAY.SUNDAY,
+    DAY.MONDAY,
+    DAY.TUESDAY,
+    DAY.WEDNESDAY,
+    DAY.THURSDAY,
+    DAY.FRIDAY,
+    DAY.SATURDAY,
+];
+
+export function getDayEnumProperKeys(): number[] {
+    // typescript enum seem not expose proper keys() function
+    return Object.keys(DAY)
+        .filter((value) => {
+            // extract only number keys, there are the number value from enum
+            return !isNaN(parseInt(value));
+        })
+        .map((value: string) => parseInt(value));
 }
 
 export type OpenDayPerYear = {
