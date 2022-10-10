@@ -1,5 +1,5 @@
-import React from 'react';
-import { Box, SwipeableDrawer, Typography } from '@mui/material';
+import React, { useCallback } from 'react';
+import { Box, IconButton, SwipeableDrawer, Typography } from '@mui/material';
 import { useAppDispatch, useAppSelector } from '../redux/hooks';
 import { isParametersDrawerOpen, toggleParametersDrawer } from '../redux/slices/UISlice';
 import {
@@ -16,22 +16,25 @@ import {
     setVatRate,
 } from '../redux/slices/ParametersSlice';
 import { EuroField, IncomingSplittingPartsField, PercentageField, WeeksNumberField } from './FormFields';
+import CloseIcon from '@mui/icons-material/Close';
+import packageJSON from '../../package.json';
 
 function ParametersDrawer() {
     const dispatch = useAppDispatch();
+    const toggleDrawer = useCallback(() => dispatch(toggleParametersDrawer()), [dispatch]);
     const isOpen = useAppSelector(isParametersDrawerOpen);
 
     const parameters: ParametersState = useAppSelector(selectParameters);
     return (
-        <SwipeableDrawer
-            open={isOpen}
-            onClose={() => dispatch(toggleParametersDrawer())}
-            onOpen={() => dispatch(toggleParametersDrawer())}
-            anchor="right"
-        >
-            <Box sx={{ width: '400px', p: 5 }}>
+        <SwipeableDrawer open={isOpen} onClose={() => toggleDrawer()} onOpen={() => toggleDrawer()} anchor="right">
+            <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'end' }}>
+                <IconButton onClick={() => toggleDrawer()}>
+                    <CloseIcon fontSize="large" />
+                </IconButton>
+            </Box>
+            <Box sx={{ maxWidth: '300px', m: '5px 30px' }}>
                 <Typography gutterBottom variant="h5" component="div">
-                    Informations entreprise
+                    Paramètres
                 </Typography>
                 <EuroField
                     label="TJM"
@@ -48,19 +51,22 @@ function ParametersDrawer() {
                     label="Congés"
                     defaultValue={parameters.dayOffContext.value}
                 />
-                <PercentageField label="TVA" dispatchAction={setVatRate} defaultValue={parameters.vatRate} />
-                <PercentageField
-                    label="Abattement fiscal"
-                    dispatchAction={setTaxAllowance}
-                    defaultValue={parameters.taxAllowance}
-                />
                 <PercentageField
                     label="Epargne d'entreprise"
                     dispatchAction={setSavingValue}
                     defaultValue={parameters.saving.value}
                 />
                 <Typography gutterBottom variant="h5" component="div">
-                    Contexte familial fiscal
+                    Fiscalité entreprise
+                </Typography>
+                <PercentageField label="TVA" dispatchAction={setVatRate} defaultValue={parameters.vatRate} />
+                <PercentageField
+                    label="Abattement fiscal"
+                    dispatchAction={setTaxAllowance}
+                    defaultValue={parameters.taxAllowance}
+                />
+                <Typography gutterBottom variant="h5" component="div">
+                    Contexte fiscal personnel
                 </Typography>
                 <IncomingSplittingPartsField
                     dispatchAction={setTaxationFamilySplittingParts}
@@ -77,6 +83,9 @@ function ParametersDrawer() {
                     dispatchAction={setTaxationFamilyTaxAllowance}
                     defaultValue={parameters.taxationFamilyContext.taxAllowance}
                 />
+            </Box>
+            <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+                <Typography variant="caption">v&nbsp;{packageJSON.version}</Typography>
             </Box>
         </SwipeableDrawer>
     );

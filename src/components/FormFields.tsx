@@ -1,5 +1,5 @@
 import { useAppDispatch } from '../redux/hooks';
-import React, { ChangeEventHandler, FocusEventHandler, ReactNode, useState } from 'react';
+import React, { ChangeEventHandler, FocusEventHandler, ReactNode, useRef, useState } from 'react';
 import { InputAdornment, InputProps as StandardInputProps, TextField } from '@mui/material';
 import { generateUniqueID } from 'web-vitals/dist/modules/lib/generateUniqueID';
 import { ActionCreatorWithPayload } from '@reduxjs/toolkit';
@@ -20,6 +20,7 @@ export function NumberField({ dispatchAction, defaultValue, label, min, max, uni
     const dispatch = useAppDispatch();
     const numberDefaultValue: number | '' = defaultValue === undefined ? '' : defaultValue;
     const [internalValue, setInternalValue] = useState<number | ''>(numberDefaultValue);
+    const inputRef = useRef<typeof TextField>(null);
 
     const onChangeHandler: ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement> = (event) => {
         if (isNaN(parseInt(event.currentTarget.value))) {
@@ -65,10 +66,13 @@ export function NumberField({ dispatchAction, defaultValue, label, min, max, uni
             onKeyPress={(event) => {
                 if (event.key === 'Enter') {
                     event.currentTarget.blur();
+                    // inputRef.current.();
                 }
             }}
+            inputRef={inputRef}
             value={internalValue}
             InputProps={inputProps}
+            size="small"
         />
     );
 }

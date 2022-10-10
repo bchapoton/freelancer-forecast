@@ -34,7 +34,7 @@ function TaxesSummary() {
                 <Box sx={{ p: 2 }}>
                     <BoxedParameters
                         noWrap={false}
-                        title="Revenus entreprise ( net imposable )"
+                        title="Revenus entreprise (&nbsp;net&nbsp;imposable&nbsp;)"
                         value={
                             <Fragment>
                                 <Euro>{yearSummary.totals.revenue}</Euro>&nbsp;(&nbsp;
@@ -44,7 +44,7 @@ function TaxesSummary() {
                     />
                     <BoxedParameters
                         noWrap={false}
-                        title="Revenus famillaux ( net imposable )"
+                        title="Revenus famillaux (&nbsp;net&nbsp;imposable&nbsp;)"
                         value={
                             <Fragment>
                                 <Euro>{parameters.taxationFamilyContext.taxableHouseholdRevenues}</Euro>&nbsp;(&nbsp;

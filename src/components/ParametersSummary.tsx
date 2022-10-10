@@ -23,8 +23,10 @@ function ParametersSummary() {
     }, [mediaQuery]);
 
     return (
-        <Box>
-            <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <Box sx={{ mt: '10px', mb: '10px' }}>
+            <Box
+                sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mt: '10px', mn: '10px' }}
+            >
                 <Typography gutterBottom variant="h5" component="div">
                     Paramètres
                 </Typography>
@@ -32,9 +34,9 @@ function ParametersSummary() {
                     {collapsed ? <ExpandMoreIcon /> : <ExpandLessIcon />}
                 </IconButton>
             </Box>
-            <Collapse in={!collapsed} timeout="auto" unmountOnExit>
+            <Collapse in={!collapsed} timeout="auto" unmountOnExit component={Box}>
                 <Grid container spacing={3}>
-                    <Grid item xs={12} md={4}>
+                    <ParameterGrid>
                         <CardParameters
                             items={[
                                 {
@@ -65,8 +67,8 @@ function ParametersSummary() {
                                 },
                             ]}
                         />
-                    </Grid>
-                    <Grid item xs={12} md={4}>
+                    </ParameterGrid>
+                    <ParameterGrid>
                         <CardParameters
                             items={[
                                 {
@@ -81,7 +83,7 @@ function ParametersSummary() {
                                     ),
                                 },
                                 {
-                                    title: 'Cotisations sociales',
+                                    title: 'Fiscalité entreprise',
                                     parameters: [
                                         { label: 'TVA', value: <Percentage>{parameters.vatRate}</Percentage> },
                                         {
@@ -92,12 +94,12 @@ function ParametersSummary() {
                                 },
                             ]}
                         />
-                    </Grid>
-                    <Grid item xs={12} md={4}>
+                    </ParameterGrid>
+                    <ParameterGrid>
                         <CardParameters
                             items={[
                                 {
-                                    title: 'Contexte familial fiscal',
+                                    title: 'Contexte fiscal personnel',
                                     parameters: [
                                         {
                                             label: 'Nombre de parts',
@@ -119,7 +121,7 @@ function ParametersSummary() {
                                 },
                             ]}
                         />
-                    </Grid>
+                    </ParameterGrid>
                 </Grid>
             </Collapse>
         </Box>
@@ -143,13 +145,11 @@ type CardParametersProps = {
 
 function CardParameters({ items }: CardParametersProps) {
     return (
-        <Card sx={{ height: '100%' }}>
-            <CardContent sx={{ p: '10px' }}>
-                {items.map((itemProps: CardParametersItemProps, index) => (
-                    <CardParametersItem key={'item-' + index} {...itemProps} />
-                ))}
-            </CardContent>
-        </Card>
+        <CardContent sx={{ p: '10px' }}>
+            {items.map((itemProps: CardParametersItemProps, index) => (
+                <CardParametersItem key={'item-' + index} {...itemProps} />
+            ))}
+        </CardContent>
     );
 }
 
@@ -223,10 +223,14 @@ export function BoxedParameters({ title, value, noWrap = true, highlighted = fal
     );
 }
 
-export type BoxedParametersContainerProps = {
+export type ParameterGridProps = {
     children: ReactNode;
 };
 
-export function BoxedParametersContainer({ children }: BoxedParametersContainerProps) {
-    return <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-evenly' }}>{children}</Box>;
+export function ParameterGrid({ children }: ParameterGridProps) {
+    return (
+        <Grid item xs={12} md={4} sx={{ padding: '5px' }}>
+            <Card>{children}</Card>
+        </Grid>
+    );
 }

@@ -49,6 +49,14 @@ function ThemeWrapper({ children }: ThemeWrapperProps) {
                     },
                 },
             },
+            MuiTypography: {
+                styleOverrides: {
+                    caption: {
+                        color: 'grey',
+                        fontSize: '12px',
+                    },
+                },
+            },
         },
     });
     return <ThemeProvider theme={theme}>{children}</ThemeProvider>;

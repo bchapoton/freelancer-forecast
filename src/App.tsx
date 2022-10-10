@@ -25,7 +25,7 @@ function App() {
                 <AppBar position="sticky" sx={{ bgcolor: '#FFF' }}>
                     <Toolbar>
                         <Typography variant="h6" component="div" sx={{ mr: 2, color: '#000' }}>
-                            Freelancer
+                            Freelancer forecast
                         </Typography>
                         <Box sx={{ flexGrow: 1 }}>&nbsp;</Box>
                         <IconButton onClick={() => dispatch(toggleParametersDrawer())}>
@@ -58,14 +58,14 @@ function App() {
 
 export default App;
 
-const AppContainer = styled(Typography)({
+const AppContainer = styled(Box)({
     marginTop: '10px',
     marginBottom: '10px',
 });
 
-const ItemContainer = styled(Typography)({
+const ItemContainer = styled(Box)({
     marginTop: '5px',
     marginBottom: '5px',
     maxWidth: '100%',
-    overflowX: 'auto',
+    //overflowX: 'auto',
 });
