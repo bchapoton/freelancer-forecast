@@ -17,7 +17,7 @@ export interface ParametersState {
 }
 
 const initialState: ParametersState = {
-    averageDailyRate: 550,
+    averageDailyRate: 650,
     year: 2022,
     vatRate: 20,
     taxAllowance: 34,
