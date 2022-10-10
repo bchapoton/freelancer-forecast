@@ -15,8 +15,15 @@ import {
     setTaxationFamilyTaxableHouseholdRevenues,
     setTaxationFamilyTaxAllowance,
     setVatRate,
+    setYear,
 } from '../redux/slices/ParametersSlice';
-import { EuroField, IncomingSplittingPartsField, PercentageField, WeeksNumberField } from './forms/NumberFields';
+import {
+    EuroField,
+    IncomingSplittingPartsField,
+    NumberField,
+    PercentageField,
+    WeeksNumberField,
+} from './forms/NumberFields';
 import CloseIcon from '@mui/icons-material/Close';
 import packageJSON from '../../package.json';
 import DaysSelect from './forms/DaysSelect';
@@ -35,8 +42,9 @@ function ParametersDrawer() {
                 </IconButton>
             </Box>
             <Box sx={{ maxWidth: '300px', m: '5px 30px' }}>
+                <NumberField dispatchAction={setYear} label="Année" defaultValue={parameters.year} />
                 <Typography gutterBottom variant="h5" component="div">
-                    Paramètres
+                    Paramètres freelance
                 </Typography>
                 <EuroField
                     label="TJM"
