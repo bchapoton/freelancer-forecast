@@ -10,14 +10,14 @@ import {
     TableRow,
     Typography,
 } from '@mui/material';
-import { IncomeTaxesSummary, TaxBracketSummary } from '../services/TaxesService';
-import Percentage from './Percentage';
-import Euro from './Euro';
-import { YearSummary } from '../services/ParametersService';
-import { useAppSelector } from '../redux/hooks';
-import { selectIncomeTaxesSummary, selectYearSummary } from '../redux/slices/SummariesSlice';
-import { ParametersState, selectParameters } from '../redux/slices/ParametersSlice';
-import { TableCellBold, TableRowFooter } from './TableCustomComponents';
+import { IncomeTaxesSummary, TaxBracketSummary } from '../../services/TaxesService';
+import Percentage from '../formatters/Percentage';
+import Euro from '../formatters/Euro';
+import { YearSummary } from '../../services/ParametersService';
+import { useAppSelector } from '../../redux/hooks';
+import { selectIncomeTaxesSummary, selectYearSummary } from '../../redux/slices/SummariesSlice';
+import { ParametersState, selectParameters } from '../../redux/slices/ParametersSlice';
+import { TableCellBold, TableRowFooter } from '../TableCustomComponents';
 import { BoxedParameters } from './ParametersSummary';
 
 function TaxesSummary() {

@@ -1,11 +1,11 @@
 import React, { Fragment, useEffect, useState } from 'react';
 import { Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from '@mui/material';
-import Euro from './Euro';
-import parametersService, { YearSummary } from '../services/ParametersService';
-import { useAppSelector } from '../redux/hooks';
-import { selectIncomeTaxesSummary, selectYearSummary } from '../redux/slices/SummariesSlice';
-import { ParametersState, selectParameters } from '../redux/slices/ParametersSlice';
-import { IncomeTaxesSummary } from '../services/TaxesService';
+import Euro from '../formatters/Euro';
+import parametersService, { YearSummary } from '../../services/ParametersService';
+import { useAppSelector } from '../../redux/hooks';
+import { selectIncomeTaxesSummary, selectYearSummary } from '../../redux/slices/SummariesSlice';
+import { ParametersState, selectParameters } from '../../redux/slices/ParametersSlice';
+import { IncomeTaxesSummary } from '../../services/TaxesService';
 
 function WageSummary() {
     const yearSummary: YearSummary = useAppSelector(selectYearSummary);

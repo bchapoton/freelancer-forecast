@@ -11,13 +11,13 @@ import {
     Typography,
 } from '@mui/material';
 
-import Euro from './Euro';
-import { useAppSelector } from '../redux/hooks';
-import { selectParameters } from '../redux/slices/ParametersSlice';
-import { selectYearSummary } from '../redux/slices/SummariesSlice';
-import parametersService, { MonthSummary } from '../services/ParametersService';
-import { TableCellBold, TableRowFooter } from './TableCustomComponents';
-import moment from '../helpers/MomentHelper';
+import Euro from '../formatters/Euro';
+import { useAppSelector } from '../../redux/hooks';
+import { selectParameters } from '../../redux/slices/ParametersSlice';
+import { selectYearSummary } from '../../redux/slices/SummariesSlice';
+import parametersService, { MonthSummary } from '../../services/ParametersService';
+import { TableCellBold, TableRowFooter } from '../TableCustomComponents';
+import moment from '../../helpers/MomentHelper';
 
 function YearSummary() {
     const parameters = useAppSelector(selectParameters);

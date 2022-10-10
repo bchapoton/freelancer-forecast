@@ -1,11 +1,11 @@
 import React from 'react';
-import YearSummary from './components/YearSummary';
-import TaxesSummary from './components/TaxesSummary';
+import YearSummary from './components/summaries/YearSummary';
+import TaxesSummary from './components/summaries/TaxesSummary';
 import { Box, Container } from '@mui/material';
 import ParametersProvider from './components/ParametersProvider';
 import ThemeWrapper from './components/ThemeWrapper';
-import ParametersSummary from './components/ParametersSummary';
-import WageSummary from './components/WageSummary';
+import ParametersSummary from './components/summaries/ParametersSummary';
+import WageSummary from './components/summaries/WageSummary';
 import AppFooter from './components/AppFooter';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';

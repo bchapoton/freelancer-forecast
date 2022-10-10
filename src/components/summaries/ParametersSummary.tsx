@@ -1,13 +1,13 @@
 import React, { ReactNode, useEffect, useState } from 'react';
 import { Box, Card, CardContent, Collapse, Grid, IconButton, Typography, useMediaQuery } from '@mui/material';
-import { useAppSelector } from '../redux/hooks';
-import { Saving, selectParameters, SocialContribution } from '../redux/slices/ParametersSlice';
-import Euro from './Euro';
-import Percentage from './Percentage';
-import calendarService from '../services/CalendarService';
+import { useAppSelector } from '../../redux/hooks';
+import { Saving, selectParameters, SocialContribution } from '../../redux/slices/ParametersSlice';
+import Euro from '../formatters/Euro';
+import Percentage from '../formatters/Percentage';
+import calendarService from '../../services/CalendarService';
 import { SxProps } from '@mui/system';
 import { Theme } from '@mui/material/styles';
-import DayFormatter from './DayFormatter';
+import DayFormatter from '../formatters/DayFormatter';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 

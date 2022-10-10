@@ -1,5 +1,5 @@
 import React from 'react';
-import calendarService, { DAY } from '../services/CalendarService';
+import calendarService, { DAY } from '../../services/CalendarService';
 
 export type DayFormatterProps = {
     children: DAY[];

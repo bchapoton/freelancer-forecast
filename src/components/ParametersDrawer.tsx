@@ -15,7 +15,7 @@ import {
     setTaxationFamilyTaxAllowance,
     setVatRate,
 } from '../redux/slices/ParametersSlice';
-import { EuroField, IncomingSplittingPartsField, PercentageField, WeeksNumberField } from './FormFields';
+import { EuroField, IncomingSplittingPartsField, PercentageField, WeeksNumberField } from './forms/FormFields';
 import CloseIcon from '@mui/icons-material/Close';
 import packageJSON from '../../package.json';
 
