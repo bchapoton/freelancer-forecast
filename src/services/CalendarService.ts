@@ -94,7 +94,7 @@ export class CalendarService {
             workingDay = openedDays;
         } else {
             // reduce the working day according to the part time policies
-            workingDay = openedDays * (1 - partTimeContext.percentage / 100);
+            workingDay = openedDays * (partTimeContext.percentage / 100);
         }
         return dayOffContext.value * workingDay;
     }
@@ -110,11 +110,16 @@ export class CalendarService {
         if (partTimeContext.percentage === 100) return fullTimeDays;
         else {
             const factor: number = 1 - (100 - partTimeContext.percentage) / 100;
-            // add 0.5 to always round to the higher int
-            return Math.round(factor * fullTimeDays + 0.5);
+            // add 0.4 to always round to the higher int
+            return Math.round(factor * fullTimeDays + 0.4);
         }
     }
 
+    /**
+     * Displayed value of day off context
+     *
+     * @param dayOffContext
+     */
     formatDayOffContext(dayOffContext: DayOffContext): string {
         return dayOffContext.value + ' semaines';
     }
@@ -138,6 +143,11 @@ export class CalendarService {
         return moment().weekday(day).format(format);
     }
 
+    /**
+     * Convert DAY number index array to DAY array
+     *
+     * @param indexes DAY indexes
+     */
     getDaysFromNumbers(indexes: number[]): DAY[] {
         const result: DAY[] = [];
         indexes.forEach((index: number) => {
@@ -145,14 +155,6 @@ export class CalendarService {
                 result.push(DayEnumWrapper[index]);
         });
         return result;
-    }
-
-    getDaysFromStrings(indexes: string[]): DAY[] {
-        const result: number[] = [];
-        indexes.forEach((index: string) => {
-            if (!isNaN(parseInt(index))) result.push(parseInt(index));
-        });
-        return this.getDaysFromNumbers(result);
     }
 }
 

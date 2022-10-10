@@ -100,6 +100,6 @@ export type SocialContribution = {
 };
 
 export type Saving = {
-    mode: 'percentage' | 'value';
+    mode: 'percentage';
     value: number;
 };

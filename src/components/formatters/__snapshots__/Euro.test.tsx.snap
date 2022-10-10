@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Euro with cents renders correctly 1`] = `
+<span>
+  1 000,00 €
+</span>
+`;
+
+exports[`Euro without cents  renders correctly 1`] = `
+<span>
+  1 000 €
+</span>
+`;

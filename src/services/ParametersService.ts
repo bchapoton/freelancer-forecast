@@ -49,7 +49,8 @@ export class ParametersService {
     }
 
     /**
-     * Apply VAT on revenue
+     * Calculate amount of VAT on revenue
+     *
      * @param revenue
      * @param rate
      */
@@ -58,7 +59,7 @@ export class ParametersService {
     }
 
     /**
-     * Apply social contributions on revenue
+     * Calculate amount of social contributions on revenue
      *
      * @param revenue
      * @param socialContributions
@@ -97,9 +98,10 @@ export class ParametersService {
      * @param saving saving policies
      */
     calculateSaving(revenue: number, saving: Saving): number {
-        if (saving.mode === 'value') return Math.max(revenue, saving.value);
-        else if (saving.mode === 'percentage') return revenue * (saving.value / 100);
-        else return 0;
+        if (saving.value === 0) {
+            return revenue;
+        }
+        return revenue * (saving.value / 100);
     }
 }
 
