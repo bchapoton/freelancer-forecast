@@ -21,7 +21,7 @@ function App() {
     return (
         <ThemeWrapper>
             <ParametersProvider>
-                <AppBar position="sticky" sx={{ bgcolor: '#FFF' }}>
+                <AppBar position="fixed" sx={{ bgcolor: '#FFF' }}>
                     <Toolbar>
                         <img src="/logo-no-background-small.png" height={40} alt="Freelancer forecast logo" />
                         <Box sx={{ flexGrow: 1 }}>&nbsp;</Box>
@@ -30,7 +30,7 @@ function App() {
                         </IconButton>
                     </Toolbar>
                 </AppBar>
-                <Container sx={{ maxWidth: '100%', overflowX: 'auto' }}>
+                <Container sx={{ maxWidth: '100%', overflowX: 'auto', mt: '65px' }}>
                     <AppContainer>
                         <ItemContainer>
                             <ParametersSummary />
