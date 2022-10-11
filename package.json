@@ -30,8 +30,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "test-coverage": "yarn test --coverage .",
+    "watch-test": "react-scripts test --watchAll",
+    "test": "react-scripts test --watchAll=false",
+    "coverage": "yarn test --watchAll=false --coverage",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
