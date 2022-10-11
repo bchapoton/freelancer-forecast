@@ -8,7 +8,7 @@ import Select, { SelectChangeEvent } from '@mui/material/Select';
 import calendarService, { DAY, getDayEnumProperKeys } from '../../services/CalendarService';
 import { ActionCreatorWithPayload } from '@reduxjs/toolkit';
 import { useAppDispatch } from '../../redux/hooks';
-import { randomUUID } from 'crypto';
+import { v4 as generateUID } from 'uuid';
 
 type DaysSelectProps = {
     dispatchAction: ActionCreatorWithPayload<DAY[], string>;
@@ -21,7 +21,7 @@ export default function DaysSelect({ dispatchAction, defaultValue = [], label }:
     const [internalValues, setInternalValues] = useState<number[]>(defaultValue);
     // typescript enum seem not expose proper keys() function
     const dayEnumKeys: number[] = useMemo<number[]>(() => getDayEnumProperKeys(), []);
-    const inputId: string = useMemo<string>(() => randomUUID(), []);
+    const inputId: string = useMemo<string>(() => generateUID(), []);
 
     return (
         <div>

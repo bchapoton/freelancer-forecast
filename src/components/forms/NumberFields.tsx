@@ -2,7 +2,7 @@ import { useAppDispatch } from '../../redux/hooks';
 import React, { ChangeEventHandler, FocusEventHandler, ReactNode, useRef, useState } from 'react';
 import { InputAdornment, InputProps as StandardInputProps, TextField } from '@mui/material';
 import { ActionCreatorWithPayload } from '@reduxjs/toolkit';
-import { randomUUID } from 'crypto';
+import { v4 as generateUID } from 'uuid';
 
 type BaseNumberFieldProps = {
     dispatchAction: ActionCreatorWithPayload<number, string>;
@@ -54,7 +54,7 @@ export function NumberField({ dispatchAction, defaultValue, label, min, max, uni
 
     return (
         <TextField
-            id={randomUUID()}
+            id={generateUID()}
             label={label}
             variant="outlined"
             margin="normal"
@@ -66,7 +66,6 @@ export function NumberField({ dispatchAction, defaultValue, label, min, max, uni
             onKeyPress={(event) => {
                 if (event.key === 'Enter') {
                     event.currentTarget.blur();
-                    // inputRef.current.();
                 }
             }}
             inputRef={inputRef}
