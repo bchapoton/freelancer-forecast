@@ -24,3 +24,7 @@ yarn-error.log*
 
 # webstorm
 /.idea
+
+# Firebase Hosting
+hosting.*.cache
+.firebaserc
