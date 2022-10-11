@@ -60,7 +60,7 @@ function ParametersSummary() {
                                             value: <ParameterSaving saving={parameters.saving} />,
                                         },
                                         {
-                                            label: 'Jours non ouvrable',
+                                            label: 'Jours non ouvrables',
                                             value: <DayFormatter>{parameters.nonWorkingDays}</DayFormatter>,
                                         },
                                     ],
@@ -87,7 +87,7 @@ function ParametersSummary() {
                                     parameters: [
                                         { label: 'TVA', value: <Percentage>{parameters.vatRate}</Percentage> },
                                         {
-                                            label: 'Abattement fiscal',
+                                            label: 'Abattement forfaitaire',
                                             value: <Percentage>{parameters.taxAllowance}</Percentage>,
                                         },
                                     ],
@@ -99,7 +99,7 @@ function ParametersSummary() {
                         <CardParameters
                             items={[
                                 {
-                                    title: 'Contexte fiscal personnel',
+                                    title: 'Fiscalité personnelle',
                                     parameters: [
                                         {
                                             label: 'Nombre de parts',
@@ -112,7 +112,7 @@ function ParametersSummary() {
                                             ),
                                         },
                                         {
-                                            label: 'Abattement fiscal',
+                                            label: 'Abattement forfaitaire',
                                             value: (
                                                 <Percentage>{parameters.taxationFamilyContext.taxAllowance}</Percentage>
                                             ),

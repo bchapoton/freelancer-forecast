@@ -67,7 +67,7 @@ function ParametersDrawer() {
                     defaultValue={parameters.saving.value}
                 />
                 <DaysSelect
-                    label="Jours non ouvrable"
+                    label="Jours non ouvrables"
                     dispatchAction={setNonWorkingDays}
                     defaultValue={parameters.nonWorkingDays}
                 />
@@ -76,7 +76,7 @@ function ParametersDrawer() {
                 </Typography>
                 <PercentageField label="TVA" dispatchAction={setVatRate} defaultValue={parameters.vatRate} />
                 <PercentageField
-                    label="Abattement fiscal"
+                    label="Abattement forfaitaire"
                     dispatchAction={setTaxAllowance}
                     defaultValue={parameters.taxAllowance}
                 />
@@ -94,7 +94,7 @@ function ParametersDrawer() {
                     defaultValue={parameters.taxationFamilyContext.taxableHouseholdRevenues}
                 />
                 <PercentageField
-                    label="Abattement fiscal"
+                    label="Abattement forfaitaire"
                     dispatchAction={setTaxationFamilyTaxAllowance}
                     defaultValue={parameters.taxationFamilyContext.taxAllowance}
                 />
