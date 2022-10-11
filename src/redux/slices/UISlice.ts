@@ -5,7 +5,7 @@ export interface UIState {
     parametersDrawerOpen: boolean;
 }
 
-const initialState: UIState = {
+export const initialState: UIState = {
     parametersDrawerOpen: false,
 };
 

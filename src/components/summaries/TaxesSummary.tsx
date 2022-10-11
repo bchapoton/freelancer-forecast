@@ -34,11 +34,11 @@ function TaxesSummary() {
                 <Box sx={{ p: 2 }}>
                     <BoxedParameters
                         noWrap={false}
-                        title="Revenus entreprise (&nbsp;net&nbsp;imposable&nbsp;)"
+                        title="Revenus entreprise (net&nbsp;imposable)"
                         value={
                             <Fragment>
-                                <Euro>{yearSummary.totals.revenue}</Euro>&nbsp;(&nbsp;
-                                <Euro>{incomeTaxesSummary.netTaxableIncome.contractorNetTaxableIncome}</Euro>&nbsp;)
+                                <Euro>{yearSummary.totals.revenue}</Euro> (
+                                <Euro>{incomeTaxesSummary.netTaxableIncome.contractorNetTaxableIncome}</Euro>)
                             </Fragment>
                         }
                     />
@@ -47,9 +47,8 @@ function TaxesSummary() {
                         title="Revenus famillaux (&nbsp;net&nbsp;imposable&nbsp;)"
                         value={
                             <Fragment>
-                                <Euro>{parameters.taxationFamilyContext.taxableHouseholdRevenues}</Euro>&nbsp;(&nbsp;
-                                <Euro>{incomeTaxesSummary.netTaxableIncome.familyNetTaxableIncome}</Euro>
-                                &nbsp;)
+                                <Euro>{parameters.taxationFamilyContext.taxableHouseholdRevenues}</Euro> (
+                                <Euro>{incomeTaxesSummary.netTaxableIncome.familyNetTaxableIncome}</Euro>)
                             </Fragment>
                         }
                     />

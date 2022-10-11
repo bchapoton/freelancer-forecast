@@ -10,7 +10,7 @@ export interface SummariesState {
 
 const emptyTotals: TotalSummary = parametersService.buildEmptyTotalSummary();
 
-const initialState: SummariesState = {
+export const initialState: SummariesState = {
     yearSummary: { monthSummaries: [], totals: emptyTotals },
     incomeTaxesSummary: {
         taxBracketSummaries: [],

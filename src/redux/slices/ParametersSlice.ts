@@ -16,7 +16,7 @@ export interface ParametersState {
     nonWorkingDays: DAY[];
 }
 
-const initialState: ParametersState = {
+export const initialState: ParametersState = {
     averageDailyRate: 650,
     year: 2022,
     vatRate: 20,
