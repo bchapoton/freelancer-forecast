@@ -9,7 +9,6 @@ import WageSummary from './components/summaries/WageSummary';
 import AppFooter from './components/AppFooter';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import { useAppDispatch } from './redux/hooks';
@@ -24,9 +23,7 @@ function App() {
             <ParametersProvider>
                 <AppBar position="sticky" sx={{ bgcolor: '#FFF' }}>
                     <Toolbar>
-                        <Typography variant="h6" component="div" sx={{ mr: 2, color: '#000' }}>
-                            Freelancer forecast
-                        </Typography>
+                        <img src="/logo-no-background-small.png" height={40} alt="Freelancer forecast logo" />
                         <Box sx={{ flexGrow: 1 }}>&nbsp;</Box>
                         <IconButton onClick={() => dispatch(toggleParametersDrawer())}>
                             <SettingsOutlinedIcon />
@@ -67,5 +64,4 @@ const ItemContainer = styled(Box)({
     marginTop: '5px',
     marginBottom: '5px',
     maxWidth: '100%',
-    //overflowX: 'auto',
 });
