@@ -1,0 +1,157 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Taxes summary renders correctly 1`] = `
+Array [
+  <div
+    className="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-1pzmhef-MuiTypography-root"
+  >
+    Impôts sur le revenu
+  </div>,
+  <div
+    className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-1ps6pg7-MuiPaper-root"
+  >
+    <div
+      className="MuiBox-root css-19midj6"
+    >
+      <div
+        className="MuiBox-root css-k008qs"
+      >
+        <div
+          className="MuiTypography-root MuiTypography-subtitle2 css-z1jfgo-MuiTypography-root"
+        >
+          Revenus entreprise (net imposable)
+        </div>
+        <div
+          className="MuiTypography-root MuiTypography-body2 css-1umiv4o-MuiTypography-root"
+        >
+          <span>
+            0,00 €
+          </span>
+           (
+          <span>
+            0,00 €
+          </span>
+          )
+        </div>
+      </div>
+      <div
+        className="MuiBox-root css-k008qs"
+      >
+        <div
+          className="MuiTypography-root MuiTypography-subtitle2 css-z1jfgo-MuiTypography-root"
+        >
+          Revenus famillaux ( net imposable )
+        </div>
+        <div
+          className="MuiTypography-root MuiTypography-body2 css-1umiv4o-MuiTypography-root"
+        >
+          <span>
+            24 506,00 €
+          </span>
+           (
+          <span>
+            0,00 €
+          </span>
+          )
+        </div>
+      </div>
+      <div
+        className="MuiBox-root css-k008qs"
+      >
+        <div
+          className="MuiTypography-root MuiTypography-subtitle2 css-z1jfgo-MuiTypography-root"
+        >
+          Nombre de parts
+        </div>
+        <div
+          className="MuiTypography-root MuiTypography-body2 css-1umiv4o-MuiTypography-root"
+        >
+          1 parts
+        </div>
+      </div>
+      <div
+        className="MuiBox-root css-14cn5a1"
+      >
+        <div
+          className="MuiTypography-root MuiTypography-subtitle2 css-z1jfgo-MuiTypography-root"
+        >
+          Revenu net imposable
+        </div>
+        <div
+          className="MuiTypography-root MuiTypography-body2 css-1umiv4o-MuiTypography-root"
+        >
+          <span>
+            0,00 €
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      className="MuiTableContainer-root css-1lqbn85-MuiTableContainer-root"
+    >
+      <table
+        className="MuiTable-root css-1m14wjh-MuiTable-root"
+        role={null}
+      >
+        <thead
+          className="MuiTableHead-root css-15wwp11-MuiTableHead-root"
+          role={null}
+        >
+          <tr
+            className="MuiTableRow-root MuiTableRow-head css-xev7fm-MuiTableRow-root"
+            role={null}
+          >
+            <th
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-t8mu5n-MuiTableCell-root"
+              scope="col"
+            >
+              Tranche imposition
+            </th>
+            <th
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-head MuiTableCell-alignRight MuiTableCell-sizeSmall css-abrxy2-MuiTableCell-root"
+              scope="col"
+            >
+              Taux imposition
+            </th>
+            <th
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-head MuiTableCell-alignRight MuiTableCell-sizeSmall css-abrxy2-MuiTableCell-root"
+              scope="col"
+            >
+              montant par tranche
+            </th>
+          </tr>
+        </thead>
+        <tbody
+          className="MuiTableBody-root css-apqrd9-MuiTableBody-root"
+          role={null}
+        >
+          <tr
+            className="MuiTableRow-root css-15p7zew-MuiTableRow-root"
+            role={null}
+          >
+            <th
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-1off7ch-MuiTableCell-root"
+              scope="row"
+            >
+              Total
+            </th>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-ftv5mp-MuiTableCell-root"
+              colSpan={2}
+            >
+              <span>
+                0,00 €
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>,
+]
+`;

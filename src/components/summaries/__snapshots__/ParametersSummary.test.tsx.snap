@@ -1,0 +1,336 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Parameters summary renders correctly 1`] = `
+<div
+  className="MuiBox-root css-1xo3mso"
+>
+  <div
+    className="MuiBox-root css-ct6m7r"
+  >
+    <div
+      className="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-1pzmhef-MuiTypography-root"
+    >
+      Paramètres
+    </div>
+    <button
+      className="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1m1cnyu-MuiButtonBase-root-MuiIconButton-root"
+      disabled={false}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onContextMenu={[Function]}
+      onDragLeave={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex={0}
+      type="button"
+    >
+      <svg
+        aria-hidden={true}
+        className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1xkvp8t-MuiSvgIcon-root"
+        data-testid="ExpandLessIcon"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="m12 8-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
+        />
+      </svg>
+    </button>
+  </div>
+  <div
+    className="MuiCollapse-root MuiCollapse-vertical MuiCollapse-entered MuiBox-root css-uhoni6-MuiCollapse-root"
+    style={
+      Object {
+        "minHeight": "0px",
+      }
+    }
+  >
+    <div
+      className="MuiCollapse-wrapper MuiCollapse-vertical css-smkl36-MuiCollapse-wrapper"
+    >
+      <div
+        className="MuiCollapse-wrapperInner MuiCollapse-vertical css-9l5vo-MuiCollapse-wrapperInner"
+      >
+        <div
+          className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+        >
+          <div
+            className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-gn09uc-MuiGrid-root"
+          >
+            <div
+              className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-bhp9pd-MuiPaper-root-MuiCard-root"
+            >
+              <div
+                className="MuiCardContent-root css-fpqqwi-MuiCardContent-root"
+              >
+                <div
+                  className="MuiBox-root css-0"
+                >
+                  <div
+                    className="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-a7rkoh-MuiTypography-root"
+                  >
+                    Informations du freelance
+                  </div>
+                  <div
+                    className="MuiBox-root css-k008qs"
+                  >
+                    <div
+                      className="MuiTypography-root MuiTypography-subtitle2 MuiTypography-noWrap css-1pc1uhe-MuiTypography-root"
+                    >
+                      TJM
+                    </div>
+                    <div
+                      className="MuiTypography-root MuiTypography-body2 css-1umiv4o-MuiTypography-root"
+                    >
+                      <span>
+                        650 €
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    className="MuiBox-root css-k008qs"
+                  >
+                    <div
+                      className="MuiTypography-root MuiTypography-subtitle2 MuiTypography-noWrap css-1pc1uhe-MuiTypography-root"
+                    >
+                      Temps de travail
+                    </div>
+                    <div
+                      className="MuiTypography-root MuiTypography-body2 css-1umiv4o-MuiTypography-root"
+                    >
+                      <span>
+                        100
+                        %
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    className="MuiBox-root css-k008qs"
+                  >
+                    <div
+                      className="MuiTypography-root MuiTypography-subtitle2 MuiTypography-noWrap css-1pc1uhe-MuiTypography-root"
+                    >
+                      Congés
+                    </div>
+                    <div
+                      className="MuiTypography-root MuiTypography-body2 css-1umiv4o-MuiTypography-root"
+                    >
+                      5 semaines
+                    </div>
+                  </div>
+                  <div
+                    className="MuiBox-root css-k008qs"
+                  >
+                    <div
+                      className="MuiTypography-root MuiTypography-subtitle2 MuiTypography-noWrap css-1pc1uhe-MuiTypography-root"
+                    >
+                      Epargne d'entreprise
+                    </div>
+                    <div
+                      className="MuiTypography-root MuiTypography-body2 css-1umiv4o-MuiTypography-root"
+                    >
+                      <span>
+                        20
+                        %
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    className="MuiBox-root css-k008qs"
+                  >
+                    <div
+                      className="MuiTypography-root MuiTypography-subtitle2 MuiTypography-noWrap css-1pc1uhe-MuiTypography-root"
+                    >
+                      Jours non ouvrable
+                    </div>
+                    <div
+                      className="MuiTypography-root MuiTypography-body2 css-1umiv4o-MuiTypography-root"
+                    >
+                      <span>
+                        sam., dim.
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-gn09uc-MuiGrid-root"
+          >
+            <div
+              className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-bhp9pd-MuiPaper-root-MuiCard-root"
+            >
+              <div
+                className="MuiCardContent-root css-fpqqwi-MuiCardContent-root"
+              >
+                <div
+                  className="MuiBox-root css-0"
+                >
+                  <div
+                    className="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-a7rkoh-MuiTypography-root"
+                  >
+                    Cotisations sociales
+                  </div>
+                  <div
+                    className="MuiBox-root css-k008qs"
+                  >
+                    <div
+                      className="MuiTypography-root MuiTypography-subtitle2 MuiTypography-noWrap css-1pc1uhe-MuiTypography-root"
+                    >
+                      Prestations de services (bnc et bic) et vente de marchandises (bic)
+                    </div>
+                    <div
+                      className="MuiTypography-root MuiTypography-body2 css-1umiv4o-MuiTypography-root"
+                    >
+                      <span>
+                        22.2
+                        %
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    className="MuiBox-root css-k008qs"
+                  >
+                    <div
+                      className="MuiTypography-root MuiTypography-subtitle2 MuiTypography-noWrap css-1pc1uhe-MuiTypography-root"
+                    >
+                      Formation prof.liberale obligatoire
+                    </div>
+                    <div
+                      className="MuiTypography-root MuiTypography-body2 css-1umiv4o-MuiTypography-root"
+                    >
+                      <span>
+                        0.2
+                        %
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="MuiBox-root css-0"
+                >
+                  <div
+                    className="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-a7rkoh-MuiTypography-root"
+                  >
+                    Fiscalité entreprise
+                  </div>
+                  <div
+                    className="MuiBox-root css-k008qs"
+                  >
+                    <div
+                      className="MuiTypography-root MuiTypography-subtitle2 MuiTypography-noWrap css-1pc1uhe-MuiTypography-root"
+                    >
+                      TVA
+                    </div>
+                    <div
+                      className="MuiTypography-root MuiTypography-body2 css-1umiv4o-MuiTypography-root"
+                    >
+                      <span>
+                        20
+                        %
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    className="MuiBox-root css-k008qs"
+                  >
+                    <div
+                      className="MuiTypography-root MuiTypography-subtitle2 MuiTypography-noWrap css-1pc1uhe-MuiTypography-root"
+                    >
+                      Abattement fiscal
+                    </div>
+                    <div
+                      className="MuiTypography-root MuiTypography-body2 css-1umiv4o-MuiTypography-root"
+                    >
+                      <span>
+                        34
+                        %
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-gn09uc-MuiGrid-root"
+          >
+            <div
+              className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-bhp9pd-MuiPaper-root-MuiCard-root"
+            >
+              <div
+                className="MuiCardContent-root css-fpqqwi-MuiCardContent-root"
+              >
+                <div
+                  className="MuiBox-root css-0"
+                >
+                  <div
+                    className="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-a7rkoh-MuiTypography-root"
+                  >
+                    Contexte fiscal personnel
+                  </div>
+                  <div
+                    className="MuiBox-root css-k008qs"
+                  >
+                    <div
+                      className="MuiTypography-root MuiTypography-subtitle2 MuiTypography-noWrap css-1pc1uhe-MuiTypography-root"
+                    >
+                      Nombre de parts
+                    </div>
+                    <div
+                      className="MuiTypography-root MuiTypography-body2 css-1umiv4o-MuiTypography-root"
+                    >
+                      3
+                    </div>
+                  </div>
+                  <div
+                    className="MuiBox-root css-k008qs"
+                  >
+                    <div
+                      className="MuiTypography-root MuiTypography-subtitle2 MuiTypography-noWrap css-1pc1uhe-MuiTypography-root"
+                    >
+                      Revenus du foyer
+                    </div>
+                    <div
+                      className="MuiTypography-root MuiTypography-body2 css-1umiv4o-MuiTypography-root"
+                    >
+                      <span>
+                        24 506,00 €
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    className="MuiBox-root css-k008qs"
+                  >
+                    <div
+                      className="MuiTypography-root MuiTypography-subtitle2 MuiTypography-noWrap css-1pc1uhe-MuiTypography-root"
+                    >
+                      Abattement fiscal
+                    </div>
+                    <div
+                      className="MuiTypography-root MuiTypography-body2 css-1umiv4o-MuiTypography-root"
+                    >
+                      <span>
+                        10
+                        %
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -1,8 +1,8 @@
 import { useAppDispatch } from '../../redux/hooks';
 import React, { ChangeEventHandler, FocusEventHandler, ReactNode, useRef, useState } from 'react';
 import { InputAdornment, InputProps as StandardInputProps, TextField } from '@mui/material';
-import { generateUniqueID } from 'web-vitals/dist/modules/lib/generateUniqueID';
 import { ActionCreatorWithPayload } from '@reduxjs/toolkit';
+import { randomUUID } from 'crypto';
 
 type BaseNumberFieldProps = {
     dispatchAction: ActionCreatorWithPayload<number, string>;
@@ -54,7 +54,7 @@ export function NumberField({ dispatchAction, defaultValue, label, min, max, uni
 
     return (
         <TextField
-            id={generateUniqueID()}
+            id={randomUUID()}
             label={label}
             variant="outlined"
             margin="normal"
