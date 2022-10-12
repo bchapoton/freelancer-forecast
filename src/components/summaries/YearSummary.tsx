@@ -1,4 +1,4 @@
-import React, { Fragment, FunctionComponent, useCallback, useMemo } from 'react';
+import React, { Fragment, useCallback, useMemo } from 'react';
 import {
     Box,
     IconButton,
@@ -9,7 +9,6 @@ import {
     TableContainer,
     TableHead,
     TableRow,
-    Theme,
     Typography,
 } from '@mui/material';
 
@@ -24,10 +23,7 @@ import parametersService, { MonthSummary } from '../../services/ParametersServic
 import { TableCellBold, TableRowFooter } from '../TableCustomComponents';
 import moment from '../../helpers/MomentHelper';
 import calendarService, { MONTH } from '../../services/CalendarService';
-import { SxProps } from '@mui/system';
-import SvgIcon, { SvgIconTypeMap } from '@mui/material/SvgIcon/SvgIcon';
 import { ReactJSXElement } from '@emotion/react/types/jsx-namespace';
-import { SvgIconClasses } from '@mui/material/SvgIcon/svgIconClasses';
 
 function YearSummary() {
     const parameters = useAppSelector(selectParameters);
