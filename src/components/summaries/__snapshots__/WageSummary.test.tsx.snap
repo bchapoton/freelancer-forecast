@@ -67,7 +67,9 @@ Array [
               aria-sort={null}
               className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
             >
-              <span>
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
                 0,00 €
               </span>
             </td>
@@ -75,7 +77,9 @@ Array [
               aria-sort={null}
               className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
             >
-              <span>
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
                 0,00 €
               </span>
             </td>
@@ -95,7 +99,9 @@ Array [
               aria-sort={null}
               className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
             >
-              <span>
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
                 0,00 €
               </span>
             </td>
@@ -103,7 +109,9 @@ Array [
               aria-sort={null}
               className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
             >
-              <span>
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
                 0,00 €
               </span>
             </td>
@@ -123,7 +131,9 @@ Array [
               aria-sort={null}
               className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
             >
-              <span>
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
                 0,00 €
               </span>
             </td>
@@ -131,7 +141,9 @@ Array [
               aria-sort={null}
               className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
             >
-              <span>
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
                 0,00 €
               </span>
             </td>
@@ -151,7 +163,9 @@ Array [
               aria-sort={null}
               className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
             >
-              <span>
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
                 0,00 €
               </span>
             </td>
@@ -159,7 +173,9 @@ Array [
               aria-sort={null}
               className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
             >
-              <span>
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
                 0,00 €
               </span>
             </td>

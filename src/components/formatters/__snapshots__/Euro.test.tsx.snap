@@ -1,13 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Euro with bold  renders correctly 1`] = `
+<span
+  className="MuiBox-root css-1vg6q84"
+>
+  1 000 €
+</span>
+`;
+
 exports[`Euro with cents renders correctly 1`] = `
-<span>
+<span
+  className="MuiBox-root css-1l7mgse"
+>
   1 000,00 €
 </span>
 `;
 
 exports[`Euro without cents  renders correctly 1`] = `
-<span>
+<span
+  className="MuiBox-root css-1l7mgse"
+>
   1 000 €
 </span>
 `;

@@ -11,3 +11,14 @@ it('Euro without cents  renders correctly', () => {
     const tree = renderer.create(<Euro cents={false}>{1000}</Euro>).toJSON();
     expect(tree).toMatchSnapshot();
 });
+
+it('Euro with bold  renders correctly', () => {
+    const tree = renderer
+        .create(
+            <Euro cents={false} bold>
+                {1000}
+            </Euro>,
+        )
+        .toJSON();
+    expect(tree).toMatchSnapshot();
+});

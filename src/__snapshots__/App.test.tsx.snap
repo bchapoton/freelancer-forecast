@@ -154,7 +154,9 @@ Array [
                             <div
                               className="MuiTypography-root MuiTypography-body2 css-1umiv4o-MuiTypography-root"
                             >
-                              <span>
+                              <span
+                                className="MuiBox-root css-1l7mgse"
+                              >
                                 650 €
                               </span>
                             </div>
@@ -213,7 +215,7 @@ Array [
                             <div
                               className="MuiTypography-root MuiTypography-subtitle2 MuiTypography-noWrap css-1pc1uhe-MuiTypography-root"
                             >
-                              Jours non ouvrable
+                              Jours non ouvrables
                             </div>
                             <div
                               className="MuiTypography-root MuiTypography-body2 css-1umiv4o-MuiTypography-root"
@@ -310,7 +312,7 @@ Array [
                             <div
                               className="MuiTypography-root MuiTypography-subtitle2 MuiTypography-noWrap css-1pc1uhe-MuiTypography-root"
                             >
-                              Abattement fiscal
+                              Abattement forfaitaire
                             </div>
                             <div
                               className="MuiTypography-root MuiTypography-body2 css-1umiv4o-MuiTypography-root"
@@ -340,7 +342,7 @@ Array [
                           <div
                             className="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-a7rkoh-MuiTypography-root"
                           >
-                            Contexte fiscal personnel
+                            Fiscalité personnelle
                           </div>
                           <div
                             className="MuiBox-root css-k008qs"
@@ -367,7 +369,9 @@ Array [
                             <div
                               className="MuiTypography-root MuiTypography-body2 css-1umiv4o-MuiTypography-root"
                             >
-                              <span>
+                              <span
+                                className="MuiBox-root css-1l7mgse"
+                              >
                                 24 506,00 €
                               </span>
                             </div>
@@ -378,7 +382,7 @@ Array [
                             <div
                               className="MuiTypography-root MuiTypography-subtitle2 MuiTypography-noWrap css-1pc1uhe-MuiTypography-root"
                             >
-                              Abattement fiscal
+                              Abattement forfaitaire
                             </div>
                             <div
                               className="MuiTypography-root MuiTypography-body2 css-1umiv4o-MuiTypography-root"
@@ -508,7 +512,9 @@ Array [
                       aria-sort={null}
                       className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                     >
-                      <span>
+                      <span
+                        className="MuiBox-root css-1l7mgse"
+                      >
                         12 350,00 €
                       </span>
                     </td>
@@ -516,7 +522,9 @@ Array [
                       aria-sort={null}
                       className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                     >
-                      <span>
+                      <span
+                        className="MuiBox-root css-1l7mgse"
+                      >
                         2 470,00 €
                       </span>
                     </td>
@@ -524,7 +532,9 @@ Array [
                       aria-sort={null}
                       className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                     >
-                      <span>
+                      <span
+                        className="MuiBox-root css-1l7mgse"
+                      >
                         14 820,00 €
                       </span>
                     </td>
@@ -532,7 +542,9 @@ Array [
                       aria-sort={null}
                       className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                     >
-                      <span>
+                      <span
+                        className="MuiBox-root css-1l7mgse"
+                      >
                         2 766,40 €
                       </span>
                     </td>
@@ -540,7 +552,9 @@ Array [
                       aria-sort={null}
                       className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                     >
-                      <span>
+                      <span
+                        className="MuiBox-root css-1l7mgse"
+                      >
                         9 583,60 €
                       </span>
                     </td>
@@ -565,7 +579,9 @@ Array [
                       aria-sort={null}
                       className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                     >
-                      <span>
+                      <span
+                        className="MuiBox-root css-1l7mgse"
+                      >
                         11 700,00 €
                       </span>
                     </td>
@@ -573,7 +589,9 @@ Array [
                       aria-sort={null}
                       className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                     >
-                      <span>
+                      <span
+                        className="MuiBox-root css-1l7mgse"
+                      >
                         2 340,00 €
                       </span>
                     </td>
@@ -581,7 +599,9 @@ Array [
                       aria-sort={null}
                       className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                     >
-                      <span>
+                      <span
+                        className="MuiBox-root css-1l7mgse"
+                      >
                         14 040,00 €
                       </span>
                     </td>
@@ -589,7 +609,9 @@ Array [
                       aria-sort={null}
                       className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                     >
-                      <span>
+                      <span
+                        className="MuiBox-root css-1l7mgse"
+                      >
                         2 620,80 €
                       </span>
                     </td>
@@ -597,7 +619,9 @@ Array [
                       aria-sort={null}
                       className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                     >
-                      <span>
+                      <span
+                        className="MuiBox-root css-1l7mgse"
+                      >
                         9 079,20 €
                       </span>
                     </td>
@@ -622,7 +646,9 @@ Array [
                       aria-sort={null}
                       className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                     >
-                      <span>
+                      <span
+                        className="MuiBox-root css-1l7mgse"
+                      >
                         13 650,00 €
                       </span>
                     </td>
@@ -630,7 +656,9 @@ Array [
                       aria-sort={null}
                       className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                     >
-                      <span>
+                      <span
+                        className="MuiBox-root css-1l7mgse"
+                      >
                         2 730,00 €
                       </span>
                     </td>
@@ -638,7 +666,9 @@ Array [
                       aria-sort={null}
                       className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                     >
-                      <span>
+                      <span
+                        className="MuiBox-root css-1l7mgse"
+                      >
                         16 380,00 €
                       </span>
                     </td>
@@ -646,7 +676,9 @@ Array [
                       aria-sort={null}
                       className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                     >
-                      <span>
+                      <span
+                        className="MuiBox-root css-1l7mgse"
+                      >
                         3 057,60 €
                       </span>
                     </td>
@@ -654,7 +686,9 @@ Array [
                       aria-sort={null}
                       className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                     >
-                      <span>
+                      <span
+                        className="MuiBox-root css-1l7mgse"
+                      >
                         10 592,40 €
                       </span>
                     </td>
@@ -679,7 +713,9 @@ Array [
                       aria-sort={null}
                       className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                     >
-                      <span>
+                      <span
+                        className="MuiBox-root css-1l7mgse"
+                      >
                         12 350,00 €
                       </span>
                     </td>
@@ -687,7 +723,9 @@ Array [
                       aria-sort={null}
                       className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                     >
-                      <span>
+                      <span
+                        className="MuiBox-root css-1l7mgse"
+                      >
                         2 470,00 €
                       </span>
                     </td>
@@ -695,7 +733,9 @@ Array [
                       aria-sort={null}
                       className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                     >
-                      <span>
+                      <span
+                        className="MuiBox-root css-1l7mgse"
+                      >
                         14 820,00 €
                       </span>
                     </td>
@@ -703,7 +743,9 @@ Array [
                       aria-sort={null}
                       className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                     >
-                      <span>
+                      <span
+                        className="MuiBox-root css-1l7mgse"
+                      >
                         2 766,40 €
                       </span>
                     </td>
@@ -711,7 +753,9 @@ Array [
                       aria-sort={null}
                       className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                     >
-                      <span>
+                      <span
+                        className="MuiBox-root css-1l7mgse"
+                      >
                         9 583,60 €
                       </span>
                     </td>
@@ -736,7 +780,9 @@ Array [
                       aria-sort={null}
                       className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                     >
-                      <span>
+                      <span
+                        className="MuiBox-root css-1l7mgse"
+                      >
                         13 000,00 €
                       </span>
                     </td>
@@ -744,7 +790,9 @@ Array [
                       aria-sort={null}
                       className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                     >
-                      <span>
+                      <span
+                        className="MuiBox-root css-1l7mgse"
+                      >
                         2 600,00 €
                       </span>
                     </td>
@@ -752,7 +800,9 @@ Array [
                       aria-sort={null}
                       className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                     >
-                      <span>
+                      <span
+                        className="MuiBox-root css-1l7mgse"
+                      >
                         15 600,00 €
                       </span>
                     </td>
@@ -760,7 +810,9 @@ Array [
                       aria-sort={null}
                       className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                     >
-                      <span>
+                      <span
+                        className="MuiBox-root css-1l7mgse"
+                      >
                         2 912,00 €
                       </span>
                     </td>
@@ -768,7 +820,9 @@ Array [
                       aria-sort={null}
                       className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                     >
-                      <span>
+                      <span
+                        className="MuiBox-root css-1l7mgse"
+                      >
                         10 088,00 €
                       </span>
                     </td>
@@ -793,7 +847,9 @@ Array [
                       aria-sort={null}
                       className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                     >
-                      <span>
+                      <span
+                        className="MuiBox-root css-1l7mgse"
+                      >
                         13 000,00 €
                       </span>
                     </td>
@@ -801,7 +857,9 @@ Array [
                       aria-sort={null}
                       className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                     >
-                      <span>
+                      <span
+                        className="MuiBox-root css-1l7mgse"
+                      >
                         2 600,00 €
                       </span>
                     </td>
@@ -809,7 +867,9 @@ Array [
                       aria-sort={null}
                       className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                     >
-                      <span>
+                      <span
+                        className="MuiBox-root css-1l7mgse"
+                      >
                         15 600,00 €
                       </span>
                     </td>
@@ -817,7 +877,9 @@ Array [
                       aria-sort={null}
                       className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                     >
-                      <span>
+                      <span
+                        className="MuiBox-root css-1l7mgse"
+                      >
                         2 912,00 €
                       </span>
                     </td>
@@ -825,7 +887,9 @@ Array [
                       aria-sort={null}
                       className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                     >
-                      <span>
+                      <span
+                        className="MuiBox-root css-1l7mgse"
+                      >
                         10 088,00 €
                       </span>
                     </td>
@@ -850,7 +914,9 @@ Array [
                       aria-sort={null}
                       className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                     >
-                      <span>
+                      <span
+                        className="MuiBox-root css-1l7mgse"
+                      >
                         12 350,00 €
                       </span>
                     </td>
@@ -858,7 +924,9 @@ Array [
                       aria-sort={null}
                       className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                     >
-                      <span>
+                      <span
+                        className="MuiBox-root css-1l7mgse"
+                      >
                         2 470,00 €
                       </span>
                     </td>
@@ -866,7 +934,9 @@ Array [
                       aria-sort={null}
                       className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                     >
-                      <span>
+                      <span
+                        className="MuiBox-root css-1l7mgse"
+                      >
                         14 820,00 €
                       </span>
                     </td>
@@ -874,7 +944,9 @@ Array [
                       aria-sort={null}
                       className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                     >
-                      <span>
+                      <span
+                        className="MuiBox-root css-1l7mgse"
+                      >
                         2 766,40 €
                       </span>
                     </td>
@@ -882,7 +954,9 @@ Array [
                       aria-sort={null}
                       className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                     >
-                      <span>
+                      <span
+                        className="MuiBox-root css-1l7mgse"
+                      >
                         9 583,60 €
                       </span>
                     </td>
@@ -907,7 +981,9 @@ Array [
                       aria-sort={null}
                       className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                     >
-                      <span>
+                      <span
+                        className="MuiBox-root css-1l7mgse"
+                      >
                         13 650,00 €
                       </span>
                     </td>
@@ -915,7 +991,9 @@ Array [
                       aria-sort={null}
                       className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                     >
-                      <span>
+                      <span
+                        className="MuiBox-root css-1l7mgse"
+                      >
                         2 730,00 €
                       </span>
                     </td>
@@ -923,7 +1001,9 @@ Array [
                       aria-sort={null}
                       className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                     >
-                      <span>
+                      <span
+                        className="MuiBox-root css-1l7mgse"
+                      >
                         16 380,00 €
                       </span>
                     </td>
@@ -931,7 +1011,9 @@ Array [
                       aria-sort={null}
                       className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                     >
-                      <span>
+                      <span
+                        className="MuiBox-root css-1l7mgse"
+                      >
                         3 057,60 €
                       </span>
                     </td>
@@ -939,7 +1021,9 @@ Array [
                       aria-sort={null}
                       className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                     >
-                      <span>
+                      <span
+                        className="MuiBox-root css-1l7mgse"
+                      >
                         10 592,40 €
                       </span>
                     </td>
@@ -964,7 +1048,9 @@ Array [
                       aria-sort={null}
                       className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                     >
-                      <span>
+                      <span
+                        className="MuiBox-root css-1l7mgse"
+                      >
                         13 000,00 €
                       </span>
                     </td>
@@ -972,7 +1058,9 @@ Array [
                       aria-sort={null}
                       className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                     >
-                      <span>
+                      <span
+                        className="MuiBox-root css-1l7mgse"
+                      >
                         2 600,00 €
                       </span>
                     </td>
@@ -980,7 +1068,9 @@ Array [
                       aria-sort={null}
                       className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                     >
-                      <span>
+                      <span
+                        className="MuiBox-root css-1l7mgse"
+                      >
                         15 600,00 €
                       </span>
                     </td>
@@ -988,7 +1078,9 @@ Array [
                       aria-sort={null}
                       className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                     >
-                      <span>
+                      <span
+                        className="MuiBox-root css-1l7mgse"
+                      >
                         2 912,00 €
                       </span>
                     </td>
@@ -996,7 +1088,9 @@ Array [
                       aria-sort={null}
                       className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                     >
-                      <span>
+                      <span
+                        className="MuiBox-root css-1l7mgse"
+                      >
                         10 088,00 €
                       </span>
                     </td>
@@ -1021,7 +1115,9 @@ Array [
                       aria-sort={null}
                       className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                     >
-                      <span>
+                      <span
+                        className="MuiBox-root css-1l7mgse"
+                      >
                         12 350,00 €
                       </span>
                     </td>
@@ -1029,7 +1125,9 @@ Array [
                       aria-sort={null}
                       className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                     >
-                      <span>
+                      <span
+                        className="MuiBox-root css-1l7mgse"
+                      >
                         2 470,00 €
                       </span>
                     </td>
@@ -1037,7 +1135,9 @@ Array [
                       aria-sort={null}
                       className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                     >
-                      <span>
+                      <span
+                        className="MuiBox-root css-1l7mgse"
+                      >
                         14 820,00 €
                       </span>
                     </td>
@@ -1045,7 +1145,9 @@ Array [
                       aria-sort={null}
                       className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                     >
-                      <span>
+                      <span
+                        className="MuiBox-root css-1l7mgse"
+                      >
                         2 766,40 €
                       </span>
                     </td>
@@ -1053,7 +1155,9 @@ Array [
                       aria-sort={null}
                       className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                     >
-                      <span>
+                      <span
+                        className="MuiBox-root css-1l7mgse"
+                      >
                         9 583,60 €
                       </span>
                     </td>
@@ -1078,7 +1182,9 @@ Array [
                       aria-sort={null}
                       className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                     >
-                      <span>
+                      <span
+                        className="MuiBox-root css-1l7mgse"
+                      >
                         13 000,00 €
                       </span>
                     </td>
@@ -1086,7 +1192,9 @@ Array [
                       aria-sort={null}
                       className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                     >
-                      <span>
+                      <span
+                        className="MuiBox-root css-1l7mgse"
+                      >
                         2 600,00 €
                       </span>
                     </td>
@@ -1094,7 +1202,9 @@ Array [
                       aria-sort={null}
                       className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                     >
-                      <span>
+                      <span
+                        className="MuiBox-root css-1l7mgse"
+                      >
                         15 600,00 €
                       </span>
                     </td>
@@ -1102,7 +1212,9 @@ Array [
                       aria-sort={null}
                       className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                     >
-                      <span>
+                      <span
+                        className="MuiBox-root css-1l7mgse"
+                      >
                         2 912,00 €
                       </span>
                     </td>
@@ -1110,7 +1222,9 @@ Array [
                       aria-sort={null}
                       className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                     >
-                      <span>
+                      <span
+                        className="MuiBox-root css-1l7mgse"
+                      >
                         10 088,00 €
                       </span>
                     </td>
@@ -1135,7 +1249,9 @@ Array [
                       aria-sort={null}
                       className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                     >
-                      <span>
+                      <span
+                        className="MuiBox-root css-1l7mgse"
+                      >
                         12 350,00 €
                       </span>
                     </td>
@@ -1143,7 +1259,9 @@ Array [
                       aria-sort={null}
                       className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                     >
-                      <span>
+                      <span
+                        className="MuiBox-root css-1l7mgse"
+                      >
                         2 470,00 €
                       </span>
                     </td>
@@ -1151,7 +1269,9 @@ Array [
                       aria-sort={null}
                       className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                     >
-                      <span>
+                      <span
+                        className="MuiBox-root css-1l7mgse"
+                      >
                         14 820,00 €
                       </span>
                     </td>
@@ -1159,7 +1279,9 @@ Array [
                       aria-sort={null}
                       className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                     >
-                      <span>
+                      <span
+                        className="MuiBox-root css-1l7mgse"
+                      >
                         2 766,40 €
                       </span>
                     </td>
@@ -1167,7 +1289,9 @@ Array [
                       aria-sort={null}
                       className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                     >
-                      <span>
+                      <span
+                        className="MuiBox-root css-1l7mgse"
+                      >
                         9 583,60 €
                       </span>
                     </td>
@@ -1192,7 +1316,9 @@ Array [
                       aria-sort={null}
                       className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-ftv5mp-MuiTableCell-root"
                     >
-                      <span>
+                      <span
+                        className="MuiBox-root css-1l7mgse"
+                      >
                         152 750,00 €
                       </span>
                     </td>
@@ -1200,7 +1326,9 @@ Array [
                       aria-sort={null}
                       className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-ftv5mp-MuiTableCell-root"
                     >
-                      <span>
+                      <span
+                        className="MuiBox-root css-1l7mgse"
+                      >
                         30 550,00 €
                       </span>
                     </td>
@@ -1208,7 +1336,9 @@ Array [
                       aria-sort={null}
                       className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-ftv5mp-MuiTableCell-root"
                     >
-                      <span>
+                      <span
+                        className="MuiBox-root css-1l7mgse"
+                      >
                         183 300,00 €
                       </span>
                     </td>
@@ -1216,7 +1346,9 @@ Array [
                       aria-sort={null}
                       className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-ftv5mp-MuiTableCell-root"
                     >
-                      <span>
+                      <span
+                        className="MuiBox-root css-1l7mgse"
+                      >
                         34 216,00 €
                       </span>
                     </td>
@@ -1224,7 +1356,9 @@ Array [
                       aria-sort={null}
                       className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-ftv5mp-MuiTableCell-root"
                     >
-                      <span>
+                      <span
+                        className="MuiBox-root css-1l7mgse"
+                      >
                         118 534,00 €
                       </span>
                     </td>
@@ -1260,11 +1394,15 @@ Array [
               <div
                 className="MuiTypography-root MuiTypography-body2 css-1umiv4o-MuiTypography-root"
               >
-                <span>
+                <span
+                  className="MuiBox-root css-1l7mgse"
+                >
                   152 750,00 €
                 </span>
                  (
-                <span>
+                <span
+                  className="MuiBox-root css-1l7mgse"
+                >
                   100 815,00 €
                 </span>
                 )
@@ -1281,11 +1419,15 @@ Array [
               <div
                 className="MuiTypography-root MuiTypography-body2 css-1umiv4o-MuiTypography-root"
               >
-                <span>
+                <span
+                  className="MuiBox-root css-1l7mgse"
+                >
                   24 506,00 €
                 </span>
                  (
-                <span>
+                <span
+                  className="MuiBox-root css-1l7mgse"
+                >
                   22 055,40 €
                 </span>
                 )
@@ -1316,7 +1458,9 @@ Array [
               <div
                 className="MuiTypography-root MuiTypography-body2 css-1umiv4o-MuiTypography-root"
               >
-                <span>
+                <span
+                  className="MuiBox-root css-1l7mgse"
+                >
                   40 956,80 €
                 </span>
               </div>
@@ -1374,12 +1518,12 @@ Array [
                     scope="row"
                   >
                     <span>
-                      0 €
+                      Jusqu'à
                     </span>
-                    <span>
-                       - 
-                    </span>
-                    <span>
+                     
+                    <span
+                      className="MuiBox-root css-1vg6q84"
+                    >
                       10 225 €
                     </span>
                   </th>
@@ -1396,7 +1540,9 @@ Array [
                     aria-sort={null}
                     className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                   >
-                    <span>
+                    <span
+                      className="MuiBox-root css-1l7mgse"
+                    >
                       0,00 €
                     </span>
                   </td>
@@ -1410,13 +1556,19 @@ Array [
                     className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-9xppz4-MuiTableCell-root"
                     scope="row"
                   >
-                    <span>
+                    De 
+                    <span
+                      className="MuiBox-root css-1vg6q84"
+                    >
                       10 226 €
                     </span>
                     <span>
-                       - 
+                       à
                     </span>
-                    <span>
+                     
+                    <span
+                      className="MuiBox-root css-1vg6q84"
+                    >
                       26 070 €
                     </span>
                   </th>
@@ -1433,7 +1585,9 @@ Array [
                     aria-sort={null}
                     className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                   >
-                    <span>
+                    <span
+                      className="MuiBox-root css-1l7mgse"
+                    >
                       1 742,84 €
                     </span>
                   </td>
@@ -1447,13 +1601,19 @@ Array [
                     className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-9xppz4-MuiTableCell-root"
                     scope="row"
                   >
-                    <span>
+                    De 
+                    <span
+                      className="MuiBox-root css-1vg6q84"
+                    >
                       26 071 €
                     </span>
                     <span>
-                       - 
+                       à
                     </span>
-                    <span>
+                     
+                    <span
+                      className="MuiBox-root css-1vg6q84"
+                    >
                       74 545 €
                     </span>
                   </th>
@@ -1470,7 +1630,9 @@ Array [
                     aria-sort={null}
                     className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                   >
-                    <span>
+                    <span
+                      className="MuiBox-root css-1l7mgse"
+                    >
                       4 465,74 €
                     </span>
                   </td>
@@ -1484,13 +1646,19 @@ Array [
                     className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-9xppz4-MuiTableCell-root"
                     scope="row"
                   >
-                    <span>
+                    De 
+                    <span
+                      className="MuiBox-root css-1vg6q84"
+                    >
                       74 546 €
                     </span>
                     <span>
-                       - 
+                       à
                     </span>
-                    <span>
+                     
+                    <span
+                      className="MuiBox-root css-1vg6q84"
+                    >
                       160 336 €
                     </span>
                   </th>
@@ -1507,7 +1675,9 @@ Array [
                     aria-sort={null}
                     className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                   >
-                    <span>
+                    <span
+                      className="MuiBox-root css-1l7mgse"
+                    >
                       0,00 €
                     </span>
                   </td>
@@ -1522,10 +1692,13 @@ Array [
                     scope="row"
                   >
                     <span>
-                      160 336 €
+                      Plus de
                     </span>
-                    <span>
-                       - 
+                     
+                    <span
+                      className="MuiBox-root css-1vg6q84"
+                    >
+                      160 336 €
                     </span>
                   </th>
                   <td
@@ -1541,7 +1714,9 @@ Array [
                     aria-sort={null}
                     className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                   >
-                    <span>
+                    <span
+                      className="MuiBox-root css-1l7mgse"
+                    >
                       0,00 €
                     </span>
                   </td>
@@ -1562,7 +1737,9 @@ Array [
                     className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-ftv5mp-MuiTableCell-root"
                     colSpan={2}
                   >
-                    <span>
+                    <span
+                      className="MuiBox-root css-1l7mgse"
+                    >
                       6 208,58 €
                     </span>
                   </td>
@@ -1640,7 +1817,9 @@ Array [
                     aria-sort={null}
                     className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                   >
-                    <span>
+                    <span
+                      className="MuiBox-root css-1l7mgse"
+                    >
                       8 005,74 €
                     </span>
                   </td>
@@ -1648,7 +1827,9 @@ Array [
                     aria-sort={null}
                     className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                   >
-                    <span>
+                    <span
+                      className="MuiBox-root css-1l7mgse"
+                    >
                       96 068,92 €
                     </span>
                   </td>
@@ -1668,7 +1849,9 @@ Array [
                     aria-sort={null}
                     className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                   >
-                    <span>
+                    <span
+                      className="MuiBox-root css-1l7mgse"
+                    >
                       517,38 €
                     </span>
                   </td>
@@ -1676,7 +1859,9 @@ Array [
                     aria-sort={null}
                     className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                   >
-                    <span>
+                    <span
+                      className="MuiBox-root css-1l7mgse"
+                    >
                       6 208,58 €
                     </span>
                   </td>
@@ -1696,7 +1881,9 @@ Array [
                     aria-sort={null}
                     className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                   >
-                    <span>
+                    <span
+                      className="MuiBox-root css-1l7mgse"
+                    >
                       7 488,36 €
                     </span>
                   </td>
@@ -1704,7 +1891,9 @@ Array [
                     aria-sort={null}
                     className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                   >
-                    <span>
+                    <span
+                      className="MuiBox-root css-1l7mgse"
+                    >
                       89 860,34 €
                     </span>
                   </td>
@@ -1724,7 +1913,9 @@ Array [
                     aria-sort={null}
                     className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                   >
-                    <span>
+                    <span
+                      className="MuiBox-root css-1l7mgse"
+                    >
                       1 872,09 €
                     </span>
                   </td>
@@ -1732,7 +1923,9 @@ Array [
                     aria-sort={null}
                     className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
                   >
-                    <span>
+                    <span
+                      className="MuiBox-root css-1l7mgse"
+                    >
                       22 465,08 €
                     </span>
                   </td>

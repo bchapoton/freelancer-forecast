@@ -10,7 +10,7 @@ import {
     TableRow,
     Typography,
 } from '@mui/material';
-import { IncomeTaxesSummary, TaxBracketSummary } from '../../services/TaxesService';
+import { IncomeTaxesSummary, TaxBracket, TaxBracketSummary } from '../../services/TaxesService';
 import Percentage from '../formatters/Percentage';
 import Euro from '../formatters/Euro';
 import { YearSummary } from '../../services/ParametersService';
@@ -84,9 +84,7 @@ function TaxesSummary() {
                                     hover={true}
                                 >
                                     <TableCell component="th" scope="row">
-                                        <Euro cents={false}>{taxBracketResult.bracket.bottomBracket}</Euro>
-                                        <span> - </span>
-                                        <Euro cents={false}>{taxBracketResult.bracket.topBracket}</Euro>
+                                        <BracketLabel>{taxBracketResult.bracket}</BracketLabel>
                                     </TableCell>
                                     <TableCell align="right">
                                         <Percentage>{taxBracketResult.bracket.rate}</Percentage>
@@ -113,3 +111,41 @@ function TaxesSummary() {
 }
 
 export default TaxesSummary;
+
+type BracketLabelProps = {
+    children: TaxBracket;
+};
+
+function BracketLabel({ children }: BracketLabelProps) {
+    if (!children.topBracket) {
+        return (
+            <Fragment>
+                <span>Plus de</span>&nbsp;
+                <Euro cents={false} bold>
+                    {children.bottomBracket}
+                </Euro>
+            </Fragment>
+        );
+    } else if (children.bottomBracket === 0) {
+        return (
+            <Fragment>
+                <span>Jusqu&apos;à</span>&nbsp;
+                <Euro cents={false} bold>
+                    {children.topBracket}
+                </Euro>
+            </Fragment>
+        );
+    }
+    return (
+        <Fragment>
+            De&nbsp;
+            <Euro cents={false} bold>
+                {children.bottomBracket}
+            </Euro>
+            <span> à</span>&nbsp;
+            <Euro cents={false} bold>
+                {children.topBracket}
+            </Euro>
+        </Fragment>
+    );
+}

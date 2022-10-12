@@ -89,7 +89,9 @@ exports[`Parameters summary renders correctly 1`] = `
                     <div
                       className="MuiTypography-root MuiTypography-body2 css-1umiv4o-MuiTypography-root"
                     >
-                      <span>
+                      <span
+                        className="MuiBox-root css-1l7mgse"
+                      >
                         650 €
                       </span>
                     </div>
@@ -148,7 +150,7 @@ exports[`Parameters summary renders correctly 1`] = `
                     <div
                       className="MuiTypography-root MuiTypography-subtitle2 MuiTypography-noWrap css-1pc1uhe-MuiTypography-root"
                     >
-                      Jours non ouvrable
+                      Jours non ouvrables
                     </div>
                     <div
                       className="MuiTypography-root MuiTypography-body2 css-1umiv4o-MuiTypography-root"
@@ -245,7 +247,7 @@ exports[`Parameters summary renders correctly 1`] = `
                     <div
                       className="MuiTypography-root MuiTypography-subtitle2 MuiTypography-noWrap css-1pc1uhe-MuiTypography-root"
                     >
-                      Abattement fiscal
+                      Abattement forfaitaire
                     </div>
                     <div
                       className="MuiTypography-root MuiTypography-body2 css-1umiv4o-MuiTypography-root"
@@ -275,7 +277,7 @@ exports[`Parameters summary renders correctly 1`] = `
                   <div
                     className="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-a7rkoh-MuiTypography-root"
                   >
-                    Contexte fiscal personnel
+                    Fiscalité personnelle
                   </div>
                   <div
                     className="MuiBox-root css-k008qs"
@@ -302,7 +304,9 @@ exports[`Parameters summary renders correctly 1`] = `
                     <div
                       className="MuiTypography-root MuiTypography-body2 css-1umiv4o-MuiTypography-root"
                     >
-                      <span>
+                      <span
+                        className="MuiBox-root css-1l7mgse"
+                      >
                         24 506,00 €
                       </span>
                     </div>
@@ -313,7 +317,7 @@ exports[`Parameters summary renders correctly 1`] = `
                     <div
                       className="MuiTypography-root MuiTypography-subtitle2 MuiTypography-noWrap css-1pc1uhe-MuiTypography-root"
                     >
-                      Abattement fiscal
+                      Abattement forfaitaire
                     </div>
                     <div
                       className="MuiTypography-root MuiTypography-body2 css-1umiv4o-MuiTypography-root"

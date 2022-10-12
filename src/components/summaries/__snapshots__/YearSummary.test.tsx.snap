@@ -107,7 +107,9 @@ exports[`Year summary renders correctly 1`] = `
               aria-sort={null}
               className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-ftv5mp-MuiTableCell-root"
             >
-              <span>
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
                 0,00 €
               </span>
             </td>
@@ -115,7 +117,9 @@ exports[`Year summary renders correctly 1`] = `
               aria-sort={null}
               className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-ftv5mp-MuiTableCell-root"
             >
-              <span>
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
                 0,00 €
               </span>
             </td>
@@ -123,7 +127,9 @@ exports[`Year summary renders correctly 1`] = `
               aria-sort={null}
               className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-ftv5mp-MuiTableCell-root"
             >
-              <span>
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
                 0,00 €
               </span>
             </td>
@@ -131,7 +137,9 @@ exports[`Year summary renders correctly 1`] = `
               aria-sort={null}
               className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-ftv5mp-MuiTableCell-root"
             >
-              <span>
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
                 0,00 €
               </span>
             </td>
@@ -139,7 +147,9 @@ exports[`Year summary renders correctly 1`] = `
               aria-sort={null}
               className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-ftv5mp-MuiTableCell-root"
             >
-              <span>
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
                 0,00 €
               </span>
             </td>

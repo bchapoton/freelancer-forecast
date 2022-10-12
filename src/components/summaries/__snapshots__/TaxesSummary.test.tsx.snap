@@ -24,11 +24,15 @@ Array [
         <div
           className="MuiTypography-root MuiTypography-body2 css-1umiv4o-MuiTypography-root"
         >
-          <span>
+          <span
+            className="MuiBox-root css-1l7mgse"
+          >
             0,00 €
           </span>
            (
-          <span>
+          <span
+            className="MuiBox-root css-1l7mgse"
+          >
             0,00 €
           </span>
           )
@@ -45,11 +49,15 @@ Array [
         <div
           className="MuiTypography-root MuiTypography-body2 css-1umiv4o-MuiTypography-root"
         >
-          <span>
+          <span
+            className="MuiBox-root css-1l7mgse"
+          >
             24 506,00 €
           </span>
            (
-          <span>
+          <span
+            className="MuiBox-root css-1l7mgse"
+          >
             0,00 €
           </span>
           )
@@ -80,7 +88,9 @@ Array [
         <div
           className="MuiTypography-root MuiTypography-body2 css-1umiv4o-MuiTypography-root"
         >
-          <span>
+          <span
+            className="MuiBox-root css-1l7mgse"
+          >
             0,00 €
           </span>
         </div>
@@ -144,7 +154,9 @@ Array [
               className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-ftv5mp-MuiTableCell-root"
               colSpan={2}
             >
-              <span>
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
                 0,00 €
               </span>
             </td>
