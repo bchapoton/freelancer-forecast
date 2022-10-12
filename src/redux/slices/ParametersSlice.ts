@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { RootState } from '../store';
 import { TaxationFamilyContext } from '../../services/TaxesService';
-import { DAY, DayOffContext, PartTimeContext } from '../../services/CalendarService';
+import { DAY, DayOffContext, getMonthEnumProperKeys, MONTH, PartTimeContext } from '../../services/CalendarService';
 
 export interface ParametersState {
     averageDailyRate: number;
@@ -14,9 +14,11 @@ export interface ParametersState {
     partTime: PartTimeContext;
     dayOffContext: DayOffContext;
     nonWorkingDays: DAY[];
+    selectedMonths: MONTH[];
 }
 
 export const initialState: ParametersState = {
+    selectedMonths: getMonthEnumProperKeys(),
     averageDailyRate: 650,
     year: 2022,
     vatRate: 20,
@@ -73,6 +75,14 @@ export const parametersSlice = createSlice({
         setNonWorkingDays: (state, action: PayloadAction<DAY[]>) => {
             state.nonWorkingDays = action.payload;
         },
+        unselectMonth: (state, action: PayloadAction<MONTH>) => {
+            state.selectedMonths = state.selectedMonths.filter((month: MONTH) => !(month === action.payload));
+        },
+        selectMonth: (state, action: PayloadAction<MONTH>) => {
+            if (state.selectedMonths.indexOf(action.payload) === -1) {
+                state.selectedMonths.push(action.payload);
+            }
+        },
     },
 });
 
@@ -88,6 +98,8 @@ export const {
     setSavingValue,
     setTaxAllowance,
     setNonWorkingDays,
+    unselectMonth,
+    selectMonth,
 } = parametersSlice.actions;
 
 export const selectParameters: (state: RootState) => ParametersState = (state: RootState) => state.parameters;

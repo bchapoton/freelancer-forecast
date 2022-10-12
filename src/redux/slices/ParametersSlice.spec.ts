@@ -1,6 +1,7 @@
 import parametersReducer, {
     initialState as storeInitialState,
     ParametersState,
+    selectMonth,
     setAverageDailyRate,
     setDayOffContextValue,
     setNonWorkingDays,
@@ -12,8 +13,9 @@ import parametersReducer, {
     setTaxationFamilyTaxAllowance,
     setVatRate,
     setYear,
+    unselectMonth,
 } from './ParametersSlice';
-import { DAY } from '../../services/CalendarService';
+import { DAY, MONTH } from '../../services/CalendarService';
 
 describe('Parameters reducers', () => {
     const initialState: ParametersState = { ...storeInitialState };
@@ -59,5 +61,16 @@ describe('Parameters reducers', () => {
 
         actual = parametersReducer(initialState, setNonWorkingDays([DAY.MONDAY]));
         expect<DAY[]>(actual.nonWorkingDays).toEqual([DAY.MONDAY]);
+
+        // All months are selected by default
+        const testMonthInitialState: ParametersState = {
+            ...initialState,
+            selectedMonths: [MONTH.JANUARY, MONTH.FEBRUARY],
+        };
+        actual = parametersReducer(testMonthInitialState, selectMonth(MONTH.AUGUST));
+        expect<MONTH[]>(actual.selectedMonths).toEqual(expect.arrayContaining<MONTH>([MONTH.AUGUST]));
+
+        actual = parametersReducer(testMonthInitialState, unselectMonth(MONTH.FEBRUARY));
+        expect<DAY[]>(actual.nonWorkingDays).toEqual(expect.not.arrayContaining<MONTH>([MONTH.FEBRUARY]));
     });
 });

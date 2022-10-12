@@ -156,11 +156,34 @@ export class CalendarService {
         });
         return result;
     }
+
+    isMonthSelected(month: MONTH, selected: MONTH[]): boolean {
+        return selected && selected.indexOf(month) > -1;
+    }
 }
 
 const calendarService: CalendarService = new CalendarService();
 
 export default calendarService;
+
+export enum MONTH {
+    JANUARY = 0,
+    FEBRUARY = 1,
+    MARCH = 2,
+    APRIL = 3,
+    MAY = 4,
+    JUNE = 5,
+    JULY = 6,
+    AUGUST = 7,
+    SEPTEMBER = 8,
+    OCTOBER = 9,
+    NOVEMBER = 10,
+    DECEMBER = 11,
+}
+
+export function getMonthEnumProperKeys(): number[] {
+    return getEnumIntegerProperKeys(MONTH);
+}
 
 export enum DAY {
     SUNDAY = 0,
@@ -187,8 +210,16 @@ const DayEnumWrapper: DAY[] = [
 ];
 
 export function getDayEnumProperKeys(): number[] {
+    return getEnumIntegerProperKeys(DAY);
+}
+
+/**
+ *
+ * @param enumeration set any type, can't pass easily an enum through function parameters
+ */
+export function getEnumIntegerProperKeys(enumeration: any): number[] {
     // typescript enum seem not expose proper keys() function
-    return Object.keys(DAY)
+    return Object.keys(enumeration)
         .filter((value) => {
             // extract only number keys, there are the number value from enum
             return !isNaN(parseInt(value));

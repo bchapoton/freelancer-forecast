@@ -33,6 +33,13 @@ exports[`Year summary renders correctly 1`] = `
               className="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-t8mu5n-MuiTableCell-root"
               scope="col"
             >
+               
+            </th>
+            <th
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-t8mu5n-MuiTableCell-root"
+              scope="col"
+            >
               mois
             </th>
             <th
@@ -94,6 +101,7 @@ exports[`Year summary renders correctly 1`] = `
             <td
               aria-sort={null}
               className="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-1off7ch-MuiTableCell-root"
+              colSpan={2}
             >
               Totaux
             </td>

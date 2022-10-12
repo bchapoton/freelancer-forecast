@@ -1,9 +1,10 @@
 import { YearSummary } from '../services/ParametersService';
 import { ParametersState } from '../redux/slices/ParametersSlice';
-import { DAY } from '../services/CalendarService';
+import { DAY, getMonthEnumProperKeys } from '../services/CalendarService';
 import { IncomeTaxesSummary } from '../services/TaxesService';
 
 export const parameters: ParametersState = {
+    selectedMonths: getMonthEnumProperKeys(),
     averageDailyRate: 550,
     year: 2022,
     vatRate: 20,
@@ -22,6 +23,7 @@ export const parameters: ParametersState = {
     dayOffContext: { unit: 'weeks', value: 5 },
     nonWorkingDays: [DAY.SATURDAY, DAY.SUNDAY],
 };
+
 export const expectedYearSummary: YearSummary = {
     monthSummaries: [
         {

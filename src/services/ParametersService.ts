@@ -18,7 +18,13 @@ export class ParametersService {
         const totalSummary: TotalSummary = this.buildEmptyTotalSummary();
 
         openDaysYear.openDayPerMonths.forEach((openDayPerMonth: OpenDayPerMonth) => {
-            const totalDays = openDayPerMonth.total;
+            let totalDays: number;
+            // if month is unselect we don't work any day in this month
+            if (parameters.selectedMonths.indexOf(openDayPerMonth.month) === -1) {
+                totalDays = 0;
+            } else {
+                totalDays = openDayPerMonth.total;
+            }
             const revenue = totalDays * parameters.averageDailyRate;
             const vat = this.calculateVAT(revenue, parameters.vatRate);
             const includingTax: number = revenue + vat;
@@ -27,7 +33,7 @@ export class ParametersService {
 
             const currentMonthSummary = {
                 month: openDayPerMonth.month,
-                totalDays: openDayPerMonth.total,
+                totalDays: totalDays,
                 revenue,
                 vat,
                 includingTax,
