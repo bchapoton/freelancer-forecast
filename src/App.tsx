@@ -23,7 +23,7 @@ function App() {
             <ParametersProvider>
                 <AppBar position="fixed" sx={{ bgcolor: '#FFF' }}>
                     <Toolbar>
-                        <img src="/logo-no-background-small.png" height={40} alt="Freelancer forecast logo" />
+                        <img src="/logo-no-background-small.png" height={30} alt="Freelancer forecast logo" />
                         <Box sx={{ flexGrow: 1 }}>&nbsp;</Box>
                         <IconButton onClick={() => dispatch(toggleParametersDrawer())}>
                             <SettingsOutlinedIcon />
