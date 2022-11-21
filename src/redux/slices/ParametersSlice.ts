@@ -24,12 +24,12 @@ export const initialState: ParametersState = {
     vatRate: 20,
     taxAllowance: 34,
     socialContribution: [
-        { rate: 22.2, label: 'Prestations de services (bnc et bic) et vente de marchandises (bic)' },
+        { rate: 21.2, label: 'Prestations de services (bnc et bic) et vente de marchandises (bic)' },
         { rate: 0.2, label: 'Formation prof.liberale obligatoire' },
     ],
     taxationFamilyContext: {
-        incomeSplittingParts: 3,
-        taxableHouseholdRevenues: 24506,
+        incomeSplittingParts: 1,
+        taxableHouseholdRevenues: 0,
         taxAllowance: 10,
     },
     saving: { mode: 'percentage', value: 20 },
