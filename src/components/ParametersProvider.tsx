@@ -22,7 +22,7 @@ function ParametersProvider({ children }: ParametersProviderProps) {
             parameters.taxationFamilyContext,
         );
         dispatch(setIncomeTaxesSummary(incomeTaxesSummary));
-    }, [parameters]);
+    }, [dispatch, parameters]);
 
     return <Fragment>{children}</Fragment>;
 }

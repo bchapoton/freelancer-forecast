@@ -19,7 +19,7 @@ export class ParametersService {
 
         openDaysYear.openDayPerMonths.forEach((openDayPerMonth: OpenDayPerMonth) => {
             let totalDays: number;
-            // if month is unselect we don't work any day in this month
+            // if month is unselected we don't work any day in this month
             if (parameters.selectedMonths.indexOf(openDayPerMonth.month) === -1) {
                 totalDays = 0;
             } else {
@@ -65,7 +65,7 @@ export class ParametersService {
     }
 
     /**
-     * Calculate amount of social contributions on revenue
+     * Calculate amount of social contributions to revenue
      *
      * @param revenue
      * @param socialContributions

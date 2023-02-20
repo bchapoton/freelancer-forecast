@@ -1,4 +1,4 @@
-import momentInstance from 'moment';
+import momentInstance, { LocaleSpecification } from 'moment';
 
 const moment = momentInstance;
 
@@ -55,14 +55,13 @@ moment.locale('fr', {
     //     return /* 0-23 hour, given meridiem token and hour 1-12 */ ;
     // },
     /* ignore eslint unused var this object come from moment documentation, probably used behind the scene */
-    /* eslint-disable @typescript-eslint/no-unused-vars */
-    meridiem: function (hours: number, minutes: number, isLower: boolean) {
+    meridiem: function (hours: number) {
         return hours < 12 ? 'PD' : 'MD';
     },
     week: {
         dow: 0, // keep sunday for the first day of the week
         doy: 4, // Used to determine first week of the year.
     },
-});
+} as LocaleSpecification);
 
 export default moment;

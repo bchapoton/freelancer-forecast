@@ -40,9 +40,9 @@ export class CalendarService {
      * Distribute evenly the day off on each month, add the rest of the division on last month
      *
      * @param dayOffContext the day off context
-     * @param partTimeContext the part time policies
+     * @param partTimeContext the part-time policies
      * @param nonWorkingDays the non-working days within the week
-     * @return array of dispatched off days on each months, index is the month index from Date
+     * @return array of dispatched off days on each month, index is the month index from Date
      */
     distributeDayOffPerMonth(
         dayOffContext: DayOffContext,
@@ -84,7 +84,7 @@ export class CalendarService {
      * Calculate how many days in a year represents the dayOffContext
      *
      * @param dayOffContext the dayOffContext to convert.
-     * @param partTimeContext the part time policies. Used for adjust the week duration
+     * @param partTimeContext the part-time policies. Used for adjust the week duration
      * @param nonWorkingDays represent the non-working days within a week.
      */
     convertDayOffToDays(dayOffContext: DayOffContext, partTimeContext: PartTimeContext, nonWorkingDays: DAY[]): number {
@@ -93,17 +93,17 @@ export class CalendarService {
         if (partTimeContext.percentage === 100) {
             workingDay = openedDays;
         } else {
-            // reduce the working day according to the part time policies
+            // reduce the working day according to the part-time policies
             workingDay = openedDays * (partTimeContext.percentage / 100);
         }
         return dayOffContext.value * workingDay;
     }
 
     /**
-     * reduce full time days according to the part time context
+     * reduce full time days according to the part-time context
      *
      * @param fullTimeDays number of days in full time job
-     * @param partTimeContext the part time context to convert
+     * @param partTimeContext the part-time context to convert
      * @return number of days rounded
      */
     convertPartTimeToDays(fullTimeDays: number, partTimeContext: PartTimeContext): number {

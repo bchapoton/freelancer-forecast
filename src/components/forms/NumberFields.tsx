@@ -15,7 +15,7 @@ import { v4 as generateUID } from 'uuid';
 import NumbersHelper from '../helpers/NumbersHelper';
 
 type BaseNumberFieldProps = {
-    dispatchAction: ActionCreatorWithPayload<number, string>;
+    dispatchAction: ActionCreatorWithPayload<number>;
     defaultValue?: number;
     label: string;
 };
@@ -53,7 +53,7 @@ export function NumberField({ dispatchAction, defaultValue, label, min, max, uni
                 dispatch(dispatchAction(parsedValue));
             }
         },
-        [dispatch, dispatchAction],
+        [dispatch, dispatchAction, numberDefaultValue],
     );
 
     const onKeyDownHandler = useCallback((event: KeyboardEvent<HTMLDivElement>) => {

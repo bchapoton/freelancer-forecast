@@ -1,10 +1,12 @@
 # Freelancer forecast
 
-Outil de prévisionnel pour l'activité d'un entreprise au régime micro-entreprise ayant une activité de prestation de services ( BIC / BNC ).
+Outil de prévisionnel pour l'activité d'une entreprise au régime micro-entreprise ayant une activité de prestation de
+services ( BIC / BNC ).
 
 L'outil est paramétrable afin d'ajuster au mieux le prévisionnel à la situation de chacun.
 
-Dans le cas d'une entreprise au régime réel, les taux peuvent être ajustés, mais pour le moment il n'est pas possible de déduire les charges de l'entreprise au revenu imposable.  
+Dans le cas d'une entreprise au régime réel, les taux peuvent être ajustés, mais pour le moment il n'est pas possible de
+déduire les charges de l'entreprise au revenu imposable.
 
 ## Démo
 
@@ -14,19 +16,22 @@ Dans le cas d'une entreprise au régime réel, les taux peuvent être ajustés, 
 
 ### Calcul des jours de congés
 
-Les jours de congés sont calculés annuellement. Calcul de la durée d'une semaine:
-   - On soustrait le nombre de jours non ouvrés
-   - On réduit la durée de la semaine en fonction du temps de travail
+Les jours de congés sont calculés annuellement. Calcul de la durée d'une semaine :
 
-Une fois ce calcul effectués nous multiplions la durée de cette semaine par le nombre de semaine de congés. Puis ces jours sont répartis de manière égale sur l'année, en ajoutant les jours en plus sur le mois de décembre.
+- On soustrait le nombre de jours non ouvrés
+- On réduit la durée de la semaine en fonction du temps de travail
+
+Une fois ce calcul effectués, nous multiplions la durée de cette semaine par le nombre de semaines de congés. Puis ces
+jours sont répartis de manière égale sur l'année, en ajoutant les jours en plus sur le mois de décembre.
 
 ### Calcul de la facturation prévisionnelle
 
-Le nombre de jours facturés est obtenu de la manière suivante : 
-   - Calcul du nombre de jour dans le mois en cours
-   - On soustrait le nombre de jour non ouvrés dans le mois en cours
-   - On soustrait le nombre de jours de congés dans le mois en cours
-   
+Le nombre de jours facturés est obtenu de la manière suivante :
+
+- Calcul du nombre de jours dans le mois en cours
+- On soustrait le nombre de jours non ouvrés dans le mois en cours
+- On soustrait le nombre de jours de congés dans le mois en cours
+
 # Available Scripts
 
 In the project directory, you can run:

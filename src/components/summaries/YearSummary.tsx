@@ -141,7 +141,7 @@ function MonthToggle({ month, selectedMonth }: MonthToggleProps) {
     const handleOnClick = useCallback(() => {
         if (isSelected) dispatch(unselectMonth(month));
         else dispatch(selectMonth(month));
-    }, [isSelected, month]);
+    }, [dispatch, isSelected, month]);
 
     return (
         <Fragment>

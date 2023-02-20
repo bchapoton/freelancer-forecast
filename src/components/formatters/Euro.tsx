@@ -15,7 +15,7 @@ function Euro({ children, cents = true, bold = false }: EuroProps) {
             currency: 'EUR',
             maximumFractionDigits: cents ? 2 : 0,
         }).format(children);
-    }, [children]);
+    }, [cents, children]);
 
     if (!displayedValue) return null;
     return (
