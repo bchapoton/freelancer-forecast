@@ -8,18 +8,19 @@ import Select, { SelectChangeEvent } from '@mui/material/Select';
 import calendarService, { DAY, WeekDaysArray } from '../../services/CalendarService';
 import { ActionCreatorWithPayload } from '@reduxjs/toolkit';
 import { useAppDispatch } from '../../redux/hooks';
-import { v4 as generateUID } from 'uuid';
+import { generateUID } from '../../helpers/UUIDHelper';
 
 type DaysSelectProps = {
     dispatchAction: ActionCreatorWithPayload<DAY[]>;
     defaultValue?: number[];
     label: string;
+    uuid?: { (): string };
 };
 
-export default function DaysSelect({ dispatchAction, defaultValue = [], label }: DaysSelectProps) {
+export default function DaysSelect({ dispatchAction, defaultValue = [], label, uuid = generateUID }: DaysSelectProps) {
     const dispatch = useAppDispatch();
     const [internalValues, setInternalValues] = useState<number[]>(defaultValue);
-    const inputId: string = useMemo<string>(() => generateUID(), []);
+    const inputId: string = useMemo<string>(() => uuid(), [uuid]);
     const onSelectHandler = useCallback(
         (event: SelectChangeEvent<number[]>) => {
             const targetValue: string | number[] = event.target.value;

@@ -11,7 +11,7 @@ import React, {
 } from 'react';
 import { InputAdornment, InputProps as StandardInputProps, TextField } from '@mui/material';
 import { ActionCreatorWithPayload } from '@reduxjs/toolkit';
-import { v4 as generateUID } from 'uuid';
+import { generateUID } from '../../helpers/UUIDHelper';
 import NumbersHelper from '../helpers/NumbersHelper';
 
 type BaseNumberFieldProps = {
@@ -24,20 +24,29 @@ export type NumberFieldProps = BaseNumberFieldProps & {
     min?: number;
     max?: number;
     unit?: ReactNode;
+    uuid?: { (): string };
 };
 
-export function NumberField({ dispatchAction, defaultValue, label, min, max, unit }: NumberFieldProps) {
+export function NumberField({
+    dispatchAction,
+    defaultValue,
+    label,
+    min,
+    max,
+    unit,
+    uuid = generateUID,
+}: NumberFieldProps) {
     const dispatch = useAppDispatch();
     const numberDefaultValue: number | '' = defaultValue === undefined ? '' : defaultValue;
     const [internalValue, setInternalValue] = useState<number | ''>(numberDefaultValue);
     const inputRef = useRef<typeof TextField>();
 
     const onChangeHandler = useCallback(
-        (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-            if (isNaN(parseInt(event.currentTarget.value))) {
+        (event: ChangeEvent<HTMLInputElement>) => {
+            if (isNaN(parseInt(event.target.value))) {
                 setInternalValue('');
             } else {
-                const inputValue: number = parseInt(event.currentTarget.value);
+                const inputValue: number = parseInt(event.target.value);
                 setInternalValue(NumbersHelper.rangedNumber(inputValue, min, max));
             }
         },
@@ -46,7 +55,7 @@ export function NumberField({ dispatchAction, defaultValue, label, min, max, uni
 
     const onBlurHandler = useCallback(
         (event: FocusEvent<HTMLInputElement>) => {
-            const parsedValue = parseInt(event.currentTarget.value);
+            const parsedValue = parseInt(event.target.value);
             if (isNaN(parsedValue)) {
                 setInternalValue(numberDefaultValue);
             } else {
@@ -71,7 +80,7 @@ export function NumberField({ dispatchAction, defaultValue, label, min, max, uni
 
     return (
         <TextField
-            id={generateUID()}
+            id={uuid()}
             label={label}
             variant="outlined"
             margin="normal"
