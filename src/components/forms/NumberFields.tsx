@@ -1,8 +1,18 @@
 import { useAppDispatch } from '../../redux/hooks';
-import React, { ChangeEventHandler, FocusEventHandler, ReactNode, useRef, useState } from 'react';
+import React, {
+    ChangeEvent,
+    FocusEvent,
+    KeyboardEvent,
+    ReactNode,
+    useCallback,
+    useMemo,
+    useRef,
+    useState,
+} from 'react';
 import { InputAdornment, InputProps as StandardInputProps, TextField } from '@mui/material';
 import { ActionCreatorWithPayload } from '@reduxjs/toolkit';
 import { v4 as generateUID } from 'uuid';
+import NumbersHelper from '../helpers/NumbersHelper';
 
 type BaseNumberFieldProps = {
     dispatchAction: ActionCreatorWithPayload<number, string>;
@@ -20,37 +30,44 @@ export function NumberField({ dispatchAction, defaultValue, label, min, max, uni
     const dispatch = useAppDispatch();
     const numberDefaultValue: number | '' = defaultValue === undefined ? '' : defaultValue;
     const [internalValue, setInternalValue] = useState<number | ''>(numberDefaultValue);
-    const inputRef = useRef<typeof TextField>(null);
+    const inputRef = useRef<typeof TextField>();
 
-    const onChangeHandler: ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement> = (event) => {
-        if (isNaN(parseInt(event.currentTarget.value))) {
-            setInternalValue('');
-        } else {
-            let inputValue: number = parseInt(event.currentTarget.value);
-            if (min !== undefined && inputValue < min) {
-                inputValue = min;
-            } else if (max !== undefined && inputValue > max) {
-                inputValue = max;
+    const onChangeHandler = useCallback(
+        (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+            if (isNaN(parseInt(event.currentTarget.value))) {
+                setInternalValue('');
+            } else {
+                const inputValue: number = parseInt(event.currentTarget.value);
+                setInternalValue(NumbersHelper.rangedNumber(inputValue, min, max));
             }
-            setInternalValue(inputValue);
+        },
+        [min, max],
+    );
+
+    const onBlurHandler = useCallback(
+        (event: FocusEvent<HTMLInputElement>) => {
+            const parsedValue = parseInt(event.currentTarget.value);
+            if (isNaN(parsedValue)) {
+                setInternalValue(numberDefaultValue);
+            } else {
+                dispatch(dispatchAction(parsedValue));
+            }
+        },
+        [dispatch, dispatchAction],
+    );
+
+    const onKeyDownHandler = useCallback((event: KeyboardEvent<HTMLDivElement>) => {
+        if (event.key === 'Enter') {
+            event.currentTarget.blur();
         }
-    };
+    }, []);
 
-    const onBlurHandler: FocusEventHandler<HTMLInputElement | HTMLTextAreaElement> = (event) => {
-        if (isNaN(parseInt(event.currentTarget.value))) {
-            setInternalValue(numberDefaultValue);
-        } else {
-            dispatch(dispatchAction(parseInt(event.currentTarget.value)));
-        }
-    };
-
-    let inputProps: Partial<StandardInputProps> | undefined = undefined;
-
-    if (unit) {
-        inputProps = {
+    const inputProps: Partial<StandardInputProps> | undefined = useMemo(() => {
+        if (!unit) return undefined;
+        return {
             endAdornment: <InputAdornment position="end">{unit}</InputAdornment>,
         };
-    }
+    }, [unit]);
 
     return (
         <TextField
@@ -63,11 +80,7 @@ export function NumberField({ dispatchAction, defaultValue, label, min, max, uni
             fullWidth
             onChange={onChangeHandler}
             onBlur={onBlurHandler}
-            onKeyPress={(event) => {
-                if (event.key === 'Enter') {
-                    event.currentTarget.blur();
-                }
-            }}
+            onKeyDown={onKeyDownHandler}
             inputRef={inputRef}
             value={internalValue}
             InputProps={inputProps}

@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { useMemo } from 'react';
 import { Box } from '@mui/material';
 
 export type EuroProps = {
@@ -8,14 +8,19 @@ export type EuroProps = {
 };
 
 function Euro({ children, cents = true, bold = false }: EuroProps) {
-    if (!children && children !== 0) return <Fragment />;
+    const displayedValue: string | undefined = useMemo(() => {
+        if (children === undefined) return undefined;
+        return new Intl.NumberFormat('fr-FR', {
+            style: 'currency',
+            currency: 'EUR',
+            maximumFractionDigits: cents ? 2 : 0,
+        }).format(children);
+    }, [children]);
+
+    if (!displayedValue) return null;
     return (
         <Box component="span" sx={{ fontWeight: bold ? 'bold' : 'normal' }}>
-            {new Intl.NumberFormat('fr-FR', {
-                style: 'currency',
-                currency: 'EUR',
-                maximumFractionDigits: cents ? 2 : 0,
-            }).format(children)}
+            {displayedValue}
         </Box>
     );
 }

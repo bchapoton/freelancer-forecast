@@ -1,8 +1,8 @@
 import summariesReducer, {
     initialState as storeInitialState,
-    SummariesState,
-    setYearSummary,
     setIncomeTaxesSummary,
+    setYearSummary,
+    SummariesState,
 } from './SummariesSlice';
 import { YearSummary } from '../../services/ParametersService';
 import { expectedIncomeTaxesSummaryAlone, expectedYearSummary } from '../../helpers/TestsCommonsParams';

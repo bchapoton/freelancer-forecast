@@ -193,7 +193,7 @@ exports[`Parameters summary renders correctly 1`] = `
                       className="MuiTypography-root MuiTypography-body2 css-1umiv4o-MuiTypography-root"
                     >
                       <span>
-                        22.2
+                        21.2
                         %
                       </span>
                     </div>
@@ -290,7 +290,7 @@ exports[`Parameters summary renders correctly 1`] = `
                     <div
                       className="MuiTypography-root MuiTypography-body2 css-1umiv4o-MuiTypography-root"
                     >
-                      3
+                      1
                     </div>
                   </div>
                   <div
@@ -307,7 +307,7 @@ exports[`Parameters summary renders correctly 1`] = `
                       <span
                         className="MuiBox-root css-1l7mgse"
                       >
-                        24 506,00 €
+                        0,00 €
                       </span>
                     </div>
                   </div>

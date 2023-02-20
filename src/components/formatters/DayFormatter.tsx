@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import calendarService, { DAY } from '../../services/CalendarService';
 
 export type DayFormatterProps = {
@@ -6,7 +6,8 @@ export type DayFormatterProps = {
 };
 
 function DayFormatter({ children }: DayFormatterProps) {
-    return <span>{calendarService.formatDays(children)}</span>;
+    const daysFormatted: string = useMemo(() => calendarService.formatDays(children), [children]);
+    return <span>{daysFormatted}</span>;
 }
 
 export default DayFormatter;

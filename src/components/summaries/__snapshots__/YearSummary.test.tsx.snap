@@ -78,7 +78,7 @@ exports[`Year summary renders correctly 1`] = `
               scope="col"
             >
               Cotisations sociales (
-              22.4
+              21.4
               %)
             </th>
             <th

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useMemo, useState } from 'react';
+import { useCallback, useMemo, useState } from 'react';
 import OutlinedInput from '@mui/material/OutlinedInput';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
@@ -22,6 +22,16 @@ export default function DaysSelect({ dispatchAction, defaultValue = [], label }:
     // typescript enum seem not expose proper keys() function
     const dayEnumKeys: number[] = useMemo<number[]>(() => getDayEnumProperKeys(), []);
     const inputId: string = useMemo<string>(() => generateUID(), []);
+    const onSelectHandler = useCallback(
+        (event: SelectChangeEvent<number[]>) => {
+            const targetValue: string | number[] = event.target.value;
+            if (Array.isArray(targetValue)) {
+                setInternalValues(targetValue);
+                dispatch(dispatchAction(calendarService.getDaysFromNumbers(targetValue as number[])));
+            }
+        },
+        [dispatch, dispatchAction],
+    );
 
     return (
         <div>
@@ -35,13 +45,7 @@ export default function DaysSelect({ dispatchAction, defaultValue = [], label }:
                     fullWidth
                     multiple
                     value={internalValues}
-                    onChange={(event: SelectChangeEvent<number[]>) => {
-                        const targetValue: string | number[] = event.target.value;
-                        if (Array.isArray(targetValue)) {
-                            setInternalValues(targetValue);
-                            dispatch(dispatchAction(calendarService.getDaysFromNumbers(targetValue as number[])));
-                        }
-                    }}
+                    onChange={onSelectHandler}
                     input={<OutlinedInput size="small" label={label} />}
                 >
                     {dayEnumKeys.map((dayIndex: number) => (
