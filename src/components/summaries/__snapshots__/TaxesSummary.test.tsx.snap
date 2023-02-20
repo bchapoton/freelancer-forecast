@@ -27,13 +27,13 @@ Array [
           <span
             className="MuiBox-root css-1l7mgse"
           >
-            0,00 €
+            0 €
           </span>
            (
           <span
             className="MuiBox-root css-1l7mgse"
           >
-            0,00 €
+            0 €
           </span>
           )
         </div>
@@ -52,13 +52,13 @@ Array [
           <span
             className="MuiBox-root css-1l7mgse"
           >
-            0,00 €
+            0 €
           </span>
            (
           <span
             className="MuiBox-root css-1l7mgse"
           >
-            0,00 €
+            0 €
           </span>
           )
         </div>
@@ -91,7 +91,7 @@ Array [
           <span
             className="MuiBox-root css-1l7mgse"
           >
-            0,00 €
+            0 €
           </span>
         </div>
       </div>
@@ -157,7 +157,7 @@ Array [
               <span
                 className="MuiBox-root css-1l7mgse"
               >
-                0,00 €
+                0 €
               </span>
             </td>
           </tr>

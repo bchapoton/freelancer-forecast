@@ -34,10 +34,10 @@ export class TaxesService {
         const incomeTaxesSummary: IncomeTaxesSummary = {
             taxBracketSummaries: [],
             netTaxableIncome: {
-                contractorNetTaxableIncome,
-                familyNetTaxableIncome,
+                contractorNetTaxableIncome: Math.round(contractorNetTaxableIncome),
+                familyNetTaxableIncome: Math.round(familyNetTaxableIncome),
                 incomeSplittingParts: taxationFamilyContext.incomeSplittingParts,
-                netTaxableIncomeResult: taxableReferenceIncome,
+                netTaxableIncomeResult: Math.round(taxableReferenceIncome),
             },
             total: 0,
         };
@@ -49,7 +49,7 @@ export class TaxesService {
                     !taxBracket.topBracket || taxableReferenceIncome <= taxBracket.topBracket
                         ? taxableReferenceIncome
                         : taxBracket.topBracket;
-                bracketAmount = (topBracket - taxBracket.bottomBracket) * (taxBracket.rate / 100);
+                bracketAmount = Math.round((topBracket - taxBracket.bottomBracket) * (taxBracket.rate / 100));
             } else bracketAmount = 0;
             incomeTaxesSummary.taxBracketSummaries.push({ bracket: taxBracket, amount: bracketAmount });
             incomeTaxesSummary.total += bracketAmount;

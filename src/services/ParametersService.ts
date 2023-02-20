@@ -34,11 +34,11 @@ export class ParametersService {
             const currentMonthSummary = {
                 month: openDayPerMonth.month,
                 totalDays: totalDays,
-                revenue,
-                vat,
-                includingTax,
-                socialContribution,
-                profits,
+                revenue: Math.round(revenue),
+                vat: Math.round(vat),
+                includingTax: Math.round(includingTax),
+                socialContribution: Math.round(socialContribution),
+                profits: Math.round(profits),
             };
 
             monthSummaries.push(currentMonthSummary);
