@@ -1,4 +1,4 @@
-import calendarService, { DAY, DayOffContext, getDayEnumProperKeys, PartTimeContext } from './CalendarService';
+import calendarService, { DAY, DayOffContext, PartTimeContext } from './CalendarService';
 
 const partTimeContextFullTime: PartTimeContext = {
     percentage: 100,
@@ -50,9 +50,5 @@ describe('CalendarService tests', () => {
     it('open days in month', () => {
         expect<number>(calendarService.calculateOpenDaysInMonth(2022, 0, [DAY.SATURDAY, DAY.SUNDAY])).toEqual(21);
         expect<number>(calendarService.calculateOpenDaysInMonth(2022, 0, [])).toEqual(31);
-    });
-
-    it('Enum proper keys workaround', () => {
-        expect<number[]>(getDayEnumProperKeys()).toEqual([0, 1, 2, 3, 4, 5, 6]);
     });
 });

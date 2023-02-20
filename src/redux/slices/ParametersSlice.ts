@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { RootState } from '../store';
 import { TaxationFamilyContext } from '../../services/TaxesService';
-import { DAY, DayOffContext, getMonthEnumProperKeys, MONTH, PartTimeContext } from '../../services/CalendarService';
+import { DAY, DayOffContext, MONTH, MonthsArray, PartTimeContext } from '../../services/CalendarService';
 
 export interface ParametersState {
     averageDailyRate: number;
@@ -18,7 +18,7 @@ export interface ParametersState {
 }
 
 export const initialState: ParametersState = {
-    selectedMonths: getMonthEnumProperKeys(),
+    selectedMonths: MonthsArray,
     averageDailyRate: 650,
     year: 2022,
     vatRate: 20,

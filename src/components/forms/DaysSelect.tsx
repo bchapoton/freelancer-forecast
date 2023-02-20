@@ -5,13 +5,13 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
-import calendarService, { DAY, getDayEnumProperKeys } from '../../services/CalendarService';
+import calendarService, { DAY, WeekDaysArray } from '../../services/CalendarService';
 import { ActionCreatorWithPayload } from '@reduxjs/toolkit';
 import { useAppDispatch } from '../../redux/hooks';
 import { v4 as generateUID } from 'uuid';
 
 type DaysSelectProps = {
-    dispatchAction: ActionCreatorWithPayload<DAY[], string>;
+    dispatchAction: ActionCreatorWithPayload<DAY[]>;
     defaultValue?: number[];
     label: string;
 };
@@ -19,8 +19,6 @@ type DaysSelectProps = {
 export default function DaysSelect({ dispatchAction, defaultValue = [], label }: DaysSelectProps) {
     const dispatch = useAppDispatch();
     const [internalValues, setInternalValues] = useState<number[]>(defaultValue);
-    // typescript enum seem not expose proper keys() function
-    const dayEnumKeys: number[] = useMemo<number[]>(() => getDayEnumProperKeys(), []);
     const inputId: string = useMemo<string>(() => generateUID(), []);
     const onSelectHandler = useCallback(
         (event: SelectChangeEvent<number[]>) => {
@@ -48,7 +46,7 @@ export default function DaysSelect({ dispatchAction, defaultValue = [], label }:
                     onChange={onSelectHandler}
                     input={<OutlinedInput size="small" label={label} />}
                 >
-                    {dayEnumKeys.map((dayIndex: number) => (
+                    {WeekDaysArray.map((dayIndex: number) => (
                         <MenuItem key={'day-index-' + dayIndex} value={dayIndex}>
                             {calendarService.formatDay(dayIndex, 'dddd')}
                         </MenuItem>

@@ -151,8 +151,9 @@ export class CalendarService {
     getDaysFromNumbers(indexes: number[]): DAY[] {
         const result: DAY[] = [];
         indexes.forEach((index: number) => {
-            if (DayEnumWrapper[index] !== null && DayEnumWrapper[index] !== undefined)
-                result.push(DayEnumWrapper[index]);
+            if (WeekDaysArray[index] !== null && WeekDaysArray[index] !== undefined) {
+                result.push(WeekDaysArray[index]);
+            }
         });
         return result;
     }
@@ -167,39 +168,50 @@ const calendarService: CalendarService = new CalendarService();
 export default calendarService;
 
 export enum MONTH {
-    JANUARY = 0,
-    FEBRUARY = 1,
-    MARCH = 2,
-    APRIL = 3,
-    MAY = 4,
-    JUNE = 5,
-    JULY = 6,
-    AUGUST = 7,
-    SEPTEMBER = 8,
-    OCTOBER = 9,
-    NOVEMBER = 10,
-    DECEMBER = 11,
+    JANUARY,
+    FEBRUARY,
+    MARCH,
+    APRIL,
+    MAY,
+    JUNE,
+    JULY,
+    AUGUST,
+    SEPTEMBER,
+    OCTOBER,
+    NOVEMBER,
+    DECEMBER,
 }
 
-export function getMonthEnumProperKeys(): number[] {
-    return getEnumIntegerProperKeys(MONTH);
-}
+export const MonthsArray: MONTH[] = [
+    MONTH.JANUARY,
+    MONTH.FEBRUARY,
+    MONTH.MARCH,
+    MONTH.APRIL,
+    MONTH.MAY,
+    MONTH.JUNE,
+    MONTH.JULY,
+    MONTH.AUGUST,
+    MONTH.SEPTEMBER,
+    MONTH.OCTOBER,
+    MONTH.NOVEMBER,
+    MONTH.DECEMBER,
+];
 
 export enum DAY {
-    SUNDAY = 0,
-    MONDAY = 1,
-    TUESDAY = 2,
-    WEDNESDAY = 3,
-    THURSDAY = 4,
-    FRIDAY = 5,
-    SATURDAY = 6,
+    SUNDAY,
+    MONDAY,
+    TUESDAY,
+    WEDNESDAY,
+    THURSDAY,
+    FRIDAY,
+    SATURDAY,
 }
 
 /**
  * Workaround to map index number value to a real DAY enum value
  * don't figured out how handle properly enum manipulation in TypeScript without type issues when handle an array of it
  */
-const DayEnumWrapper: DAY[] = [
+export const WeekDaysArray: DAY[] = [
     DAY.SUNDAY,
     DAY.MONDAY,
     DAY.TUESDAY,
@@ -208,24 +220,6 @@ const DayEnumWrapper: DAY[] = [
     DAY.FRIDAY,
     DAY.SATURDAY,
 ];
-
-export function getDayEnumProperKeys(): number[] {
-    return getEnumIntegerProperKeys(DAY);
-}
-
-/**
- *
- * @param enumeration set any type, can't pass easily an enum through function parameters
- */
-export function getEnumIntegerProperKeys(enumeration: any): number[] {
-    // typescript enum seem not expose proper keys() function
-    return Object.keys(enumeration)
-        .filter((value) => {
-            // extract only number keys, there are the number value from enum
-            return !isNaN(parseInt(value));
-        })
-        .map((value: string) => parseInt(value));
-}
 
 export type OpenDayPerYear = {
     year: number;

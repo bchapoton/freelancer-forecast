@@ -1,10 +1,10 @@
 import { YearSummary } from '../services/ParametersService';
 import { ParametersState } from '../redux/slices/ParametersSlice';
-import { DAY, getMonthEnumProperKeys } from '../services/CalendarService';
+import { DAY, MonthsArray } from '../services/CalendarService';
 import { IncomeTaxesSummary } from '../services/TaxesService';
 
 export const parameters: ParametersState = {
-    selectedMonths: getMonthEnumProperKeys(),
+    selectedMonths: MonthsArray,
     averageDailyRate: 550,
     year: 2022,
     vatRate: 20,
