@@ -28,7 +28,6 @@ const max: number = 100;
 
 it('NumberField act correctly', () => {
     const defaultValueFromStore = store.getState().parameters.vatRate;
-    const min: number = 0;
     const max: number = 100;
     const component = createRenderer(defaultValueFromStore);
     const tree = component.toJSON();
@@ -68,8 +67,15 @@ it('NumberField act correctly', () => {
         }
     });
     expect(component.toJSON()).toMatchSnapshot();
-    // internal value must be the max value
-    expect(found.props.value).toEqual(min);
+    // user provide string value
+    renderer.act(() => {
+        if (found.props.onChange) {
+            found.props.onChange({ target: { value: 'bad value type' } });
+        }
+    });
+    expect(component.toJSON()).toMatchSnapshot();
+    // internal value must be the min value
+    expect(found.props.value).toEqual('');
 
     // blur NumberField
     const blurValue: number = 50;

@@ -95,6 +95,1242 @@ exports[`Year summary renders correctly 1`] = `
           role={null}
         >
           <tr
+            className="MuiTableRow-root MuiTableRow-hover css-d9l2c8-MuiTableRow-root"
+            role={null}
+          >
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-paddingCheckbox MuiTableCell-sizeSmall css-1skk8qa-MuiTableCell-root"
+            >
+              <button
+                className="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1m1cnyu-MuiButtonBase-root-MuiIconButton-root"
+                disabled={false}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onContextMenu={[Function]}
+                onDragLeave={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                tabIndex={0}
+                type="button"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1xkvp8t-MuiSvgIcon-root"
+                  data-testid="WorkIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"
+                  />
+                </svg>
+              </button>
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-aoe8iz-MuiTableCell-root"
+            >
+              janvier
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
+            >
+              20
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
+            >
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
+                13 000 €
+              </span>
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
+            >
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
+                2 600 €
+              </span>
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
+            >
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
+                15 600 €
+              </span>
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
+            >
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
+                2 782 €
+              </span>
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
+            >
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
+                10 218 €
+              </span>
+            </td>
+          </tr>
+          <tr
+            className="MuiTableRow-root MuiTableRow-hover css-d9l2c8-MuiTableRow-root"
+            role={null}
+          >
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-paddingCheckbox MuiTableCell-sizeSmall css-1skk8qa-MuiTableCell-root"
+            >
+              <button
+                className="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1m1cnyu-MuiButtonBase-root-MuiIconButton-root"
+                disabled={false}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onContextMenu={[Function]}
+                onDragLeave={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                tabIndex={0}
+                type="button"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1xkvp8t-MuiSvgIcon-root"
+                  data-testid="WorkIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"
+                  />
+                </svg>
+              </button>
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-aoe8iz-MuiTableCell-root"
+            >
+              février
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
+            >
+              18
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
+            >
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
+                11 700 €
+              </span>
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
+            >
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
+                2 340 €
+              </span>
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
+            >
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
+                14 040 €
+              </span>
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
+            >
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
+                2 504 €
+              </span>
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
+            >
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
+                9 196 €
+              </span>
+            </td>
+          </tr>
+          <tr
+            className="MuiTableRow-root MuiTableRow-hover css-d9l2c8-MuiTableRow-root"
+            role={null}
+          >
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-paddingCheckbox MuiTableCell-sizeSmall css-1skk8qa-MuiTableCell-root"
+            >
+              <button
+                className="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1m1cnyu-MuiButtonBase-root-MuiIconButton-root"
+                disabled={false}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onContextMenu={[Function]}
+                onDragLeave={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                tabIndex={0}
+                type="button"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1xkvp8t-MuiSvgIcon-root"
+                  data-testid="WorkIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"
+                  />
+                </svg>
+              </button>
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-aoe8iz-MuiTableCell-root"
+            >
+              mars
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
+            >
+              21
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
+            >
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
+                13 650 €
+              </span>
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
+            >
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
+                2 730 €
+              </span>
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
+            >
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
+                16 380 €
+              </span>
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
+            >
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
+                2 921 €
+              </span>
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
+            >
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
+                10 729 €
+              </span>
+            </td>
+          </tr>
+          <tr
+            className="MuiTableRow-root MuiTableRow-hover css-d9l2c8-MuiTableRow-root"
+            role={null}
+          >
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-paddingCheckbox MuiTableCell-sizeSmall css-1skk8qa-MuiTableCell-root"
+            >
+              <button
+                className="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1m1cnyu-MuiButtonBase-root-MuiIconButton-root"
+                disabled={false}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onContextMenu={[Function]}
+                onDragLeave={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                tabIndex={0}
+                type="button"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1xkvp8t-MuiSvgIcon-root"
+                  data-testid="WorkIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"
+                  />
+                </svg>
+              </button>
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-aoe8iz-MuiTableCell-root"
+            >
+              avril
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
+            >
+              18
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
+            >
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
+                11 700 €
+              </span>
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
+            >
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
+                2 340 €
+              </span>
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
+            >
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
+                14 040 €
+              </span>
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
+            >
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
+                2 504 €
+              </span>
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
+            >
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
+                9 196 €
+              </span>
+            </td>
+          </tr>
+          <tr
+            className="MuiTableRow-root MuiTableRow-hover css-d9l2c8-MuiTableRow-root"
+            role={null}
+          >
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-paddingCheckbox MuiTableCell-sizeSmall css-1skk8qa-MuiTableCell-root"
+            >
+              <button
+                className="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1m1cnyu-MuiButtonBase-root-MuiIconButton-root"
+                disabled={false}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onContextMenu={[Function]}
+                onDragLeave={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                tabIndex={0}
+                type="button"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1xkvp8t-MuiSvgIcon-root"
+                  data-testid="WorkIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"
+                  />
+                </svg>
+              </button>
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-aoe8iz-MuiTableCell-root"
+            >
+              mai
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
+            >
+              21
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
+            >
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
+                13 650 €
+              </span>
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
+            >
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
+                2 730 €
+              </span>
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
+            >
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
+                16 380 €
+              </span>
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
+            >
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
+                2 921 €
+              </span>
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
+            >
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
+                10 729 €
+              </span>
+            </td>
+          </tr>
+          <tr
+            className="MuiTableRow-root MuiTableRow-hover css-d9l2c8-MuiTableRow-root"
+            role={null}
+          >
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-paddingCheckbox MuiTableCell-sizeSmall css-1skk8qa-MuiTableCell-root"
+            >
+              <button
+                className="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1m1cnyu-MuiButtonBase-root-MuiIconButton-root"
+                disabled={false}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onContextMenu={[Function]}
+                onDragLeave={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                tabIndex={0}
+                type="button"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1xkvp8t-MuiSvgIcon-root"
+                  data-testid="WorkIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"
+                  />
+                </svg>
+              </button>
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-aoe8iz-MuiTableCell-root"
+            >
+              juin
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
+            >
+              20
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
+            >
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
+                13 000 €
+              </span>
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
+            >
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
+                2 600 €
+              </span>
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
+            >
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
+                15 600 €
+              </span>
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
+            >
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
+                2 782 €
+              </span>
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
+            >
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
+                10 218 €
+              </span>
+            </td>
+          </tr>
+          <tr
+            className="MuiTableRow-root MuiTableRow-hover css-d9l2c8-MuiTableRow-root"
+            role={null}
+          >
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-paddingCheckbox MuiTableCell-sizeSmall css-1skk8qa-MuiTableCell-root"
+            >
+              <button
+                className="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1m1cnyu-MuiButtonBase-root-MuiIconButton-root"
+                disabled={false}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onContextMenu={[Function]}
+                onDragLeave={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                tabIndex={0}
+                type="button"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1xkvp8t-MuiSvgIcon-root"
+                  data-testid="WorkIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"
+                  />
+                </svg>
+              </button>
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-aoe8iz-MuiTableCell-root"
+            >
+              juillet
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
+            >
+              19
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
+            >
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
+                12 350 €
+              </span>
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
+            >
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
+                2 470 €
+              </span>
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
+            >
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
+                14 820 €
+              </span>
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
+            >
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
+                2 643 €
+              </span>
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
+            >
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
+                9 707 €
+              </span>
+            </td>
+          </tr>
+          <tr
+            className="MuiTableRow-root MuiTableRow-hover css-d9l2c8-MuiTableRow-root"
+            role={null}
+          >
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-paddingCheckbox MuiTableCell-sizeSmall css-1skk8qa-MuiTableCell-root"
+            >
+              <button
+                className="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1m1cnyu-MuiButtonBase-root-MuiIconButton-root"
+                disabled={false}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onContextMenu={[Function]}
+                onDragLeave={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                tabIndex={0}
+                type="button"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1xkvp8t-MuiSvgIcon-root"
+                  data-testid="WorkIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"
+                  />
+                </svg>
+              </button>
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-aoe8iz-MuiTableCell-root"
+            >
+              août
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
+            >
+              21
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
+            >
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
+                13 650 €
+              </span>
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
+            >
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
+                2 730 €
+              </span>
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
+            >
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
+                16 380 €
+              </span>
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
+            >
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
+                2 921 €
+              </span>
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
+            >
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
+                10 729 €
+              </span>
+            </td>
+          </tr>
+          <tr
+            className="MuiTableRow-root MuiTableRow-hover css-d9l2c8-MuiTableRow-root"
+            role={null}
+          >
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-paddingCheckbox MuiTableCell-sizeSmall css-1skk8qa-MuiTableCell-root"
+            >
+              <button
+                className="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1m1cnyu-MuiButtonBase-root-MuiIconButton-root"
+                disabled={false}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onContextMenu={[Function]}
+                onDragLeave={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                tabIndex={0}
+                type="button"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1xkvp8t-MuiSvgIcon-root"
+                  data-testid="WorkIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"
+                  />
+                </svg>
+              </button>
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-aoe8iz-MuiTableCell-root"
+            >
+              septembre
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
+            >
+              19
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
+            >
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
+                12 350 €
+              </span>
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
+            >
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
+                2 470 €
+              </span>
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
+            >
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
+                14 820 €
+              </span>
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
+            >
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
+                2 643 €
+              </span>
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
+            >
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
+                9 707 €
+              </span>
+            </td>
+          </tr>
+          <tr
+            className="MuiTableRow-root MuiTableRow-hover css-d9l2c8-MuiTableRow-root"
+            role={null}
+          >
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-paddingCheckbox MuiTableCell-sizeSmall css-1skk8qa-MuiTableCell-root"
+            >
+              <button
+                className="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1m1cnyu-MuiButtonBase-root-MuiIconButton-root"
+                disabled={false}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onContextMenu={[Function]}
+                onDragLeave={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                tabIndex={0}
+                type="button"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1xkvp8t-MuiSvgIcon-root"
+                  data-testid="WorkIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"
+                  />
+                </svg>
+              </button>
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-aoe8iz-MuiTableCell-root"
+            >
+              octobre
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
+            >
+              20
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
+            >
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
+                13 000 €
+              </span>
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
+            >
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
+                2 600 €
+              </span>
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
+            >
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
+                15 600 €
+              </span>
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
+            >
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
+                2 782 €
+              </span>
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
+            >
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
+                10 218 €
+              </span>
+            </td>
+          </tr>
+          <tr
+            className="MuiTableRow-root MuiTableRow-hover css-d9l2c8-MuiTableRow-root"
+            role={null}
+          >
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-paddingCheckbox MuiTableCell-sizeSmall css-1skk8qa-MuiTableCell-root"
+            >
+              <button
+                className="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1m1cnyu-MuiButtonBase-root-MuiIconButton-root"
+                disabled={false}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onContextMenu={[Function]}
+                onDragLeave={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                tabIndex={0}
+                type="button"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1xkvp8t-MuiSvgIcon-root"
+                  data-testid="WorkIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"
+                  />
+                </svg>
+              </button>
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-aoe8iz-MuiTableCell-root"
+            >
+              novembre
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
+            >
+              20
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
+            >
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
+                13 000 €
+              </span>
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
+            >
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
+                2 600 €
+              </span>
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
+            >
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
+                15 600 €
+              </span>
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
+            >
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
+                2 782 €
+              </span>
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
+            >
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
+                10 218 €
+              </span>
+            </td>
+          </tr>
+          <tr
+            className="MuiTableRow-root MuiTableRow-hover css-d9l2c8-MuiTableRow-root"
+            role={null}
+          >
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-paddingCheckbox MuiTableCell-sizeSmall css-1skk8qa-MuiTableCell-root"
+            >
+              <button
+                className="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1m1cnyu-MuiButtonBase-root-MuiIconButton-root"
+                disabled={false}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onContextMenu={[Function]}
+                onDragLeave={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                tabIndex={0}
+                type="button"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1xkvp8t-MuiSvgIcon-root"
+                  data-testid="WorkIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"
+                  />
+                </svg>
+              </button>
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-aoe8iz-MuiTableCell-root"
+            >
+              décembre
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
+            >
+              18
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
+            >
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
+                11 700 €
+              </span>
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
+            >
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
+                2 340 €
+              </span>
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
+            >
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
+                14 040 €
+              </span>
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
+            >
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
+                2 504 €
+              </span>
+            </td>
+            <td
+              aria-sort={null}
+              className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-egzx5e-MuiTableCell-root"
+            >
+              <span
+                className="MuiBox-root css-1l7mgse"
+              >
+                9 196 €
+              </span>
+            </td>
+          </tr>
+          <tr
             className="MuiTableRow-root css-15p7zew-MuiTableRow-root"
             role={null}
           >
@@ -109,7 +1345,7 @@ exports[`Year summary renders correctly 1`] = `
               aria-sort={null}
               className="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-ftv5mp-MuiTableCell-root"
             >
-              0
+              235
             </td>
             <td
               aria-sort={null}
@@ -118,7 +1354,7 @@ exports[`Year summary renders correctly 1`] = `
               <span
                 className="MuiBox-root css-1l7mgse"
               >
-                0 €
+                152 750 €
               </span>
             </td>
             <td
@@ -128,7 +1364,7 @@ exports[`Year summary renders correctly 1`] = `
               <span
                 className="MuiBox-root css-1l7mgse"
               >
-                0 €
+                30 550 €
               </span>
             </td>
             <td
@@ -138,7 +1374,7 @@ exports[`Year summary renders correctly 1`] = `
               <span
                 className="MuiBox-root css-1l7mgse"
               >
-                0 €
+                183 300 €
               </span>
             </td>
             <td
@@ -148,7 +1384,7 @@ exports[`Year summary renders correctly 1`] = `
               <span
                 className="MuiBox-root css-1l7mgse"
               >
-                0 €
+                32 689 €
               </span>
             </td>
             <td
@@ -158,7 +1394,7 @@ exports[`Year summary renders correctly 1`] = `
               <span
                 className="MuiBox-root css-1l7mgse"
               >
-                0 €
+                120 061 €
               </span>
             </td>
           </tr>

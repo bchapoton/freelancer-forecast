@@ -5,13 +5,16 @@ import { storeConfigurator } from '../../redux/store';
 import { Provider } from 'react-redux';
 import ThemeWrapper from '../ThemeWrapper';
 import { TestHelper } from '../../helpers/TestHelper';
+import ParametersProvider from '../ParametersProvider';
 
 it('Parameters summary renders correctly', () => {
     const tree = renderer
         .create(
             <Provider store={storeConfigurator(TestHelper.initTestingStore())}>
                 <ThemeWrapper>
-                    <ParametersSummary />
+                    <ParametersProvider>
+                        <ParametersSummary />
+                    </ParametersProvider>
                 </ThemeWrapper>
             </Provider>,
         )

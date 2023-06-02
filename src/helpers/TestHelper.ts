@@ -1,15 +1,26 @@
 import { initialState as ParametersInitialState, ParametersState } from '../redux/slices/ParametersSlice';
-import { initialState as SummariesInitialState, SummariesState } from '../redux/slices/SummariesSlice';
+import { SummariesState } from '../redux/slices/SummariesSlice';
 import { initialState as UIInitialState, UIState } from '../redux/slices/UISlice';
+import parametersService from '../services/ParametersService';
+import taxesService from '../services/TaxesService';
 
 export class TestHelper {
     static initTestingStore(): StorePreloadedState {
+        const parametersState = ParametersInitialState;
+        const yearSummary = parametersService.buildYearSummary(parametersState);
         return {
             parameters: {
-                ...ParametersInitialState,
+                ...parametersState,
                 year: 2022,
             },
-            summaries: SummariesInitialState,
+            summaries: {
+                yearSummary,
+                incomeTaxesSummary: taxesService.getIncomeTaxesSummary(
+                    yearSummary.totals.revenue,
+                    parametersState.taxAllowance,
+                    parametersState.taxationFamilyContext,
+                ),
+            },
             ui: UIInitialState,
         };
     }

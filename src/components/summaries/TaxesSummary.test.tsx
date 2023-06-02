@@ -5,13 +5,16 @@ import { Provider } from 'react-redux';
 import ThemeWrapper from '../ThemeWrapper';
 import TaxesSummary from './TaxesSummary';
 import { TestHelper } from '../../helpers/TestHelper';
+import ParametersProvider from '../ParametersProvider';
 
 it('Taxes summary renders correctly', () => {
     const tree = renderer
         .create(
             <Provider store={storeConfigurator(TestHelper.initTestingStore())}>
                 <ThemeWrapper>
-                    <TaxesSummary />
+                    <ParametersProvider>
+                        <TaxesSummary />
+                    </ParametersProvider>
                 </ThemeWrapper>
             </Provider>,
         )
