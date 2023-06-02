@@ -35,7 +35,7 @@ exports[`NumberField act correctly 1`] = `
       onChange={[Function]}
       onFocus={[Function]}
       required={true}
-      type="number"
+      type="text"
       value={20}
     />
     <div
@@ -100,7 +100,7 @@ exports[`NumberField act correctly 2`] = `
       onChange={[Function]}
       onFocus={[Function]}
       required={true}
-      type="number"
+      type="text"
       value={60}
     />
     <div
@@ -165,7 +165,7 @@ exports[`NumberField act correctly 3`] = `
       onChange={[Function]}
       onFocus={[Function]}
       required={true}
-      type="number"
+      type="text"
       value={100}
     />
     <div
@@ -230,7 +230,7 @@ exports[`NumberField act correctly 4`] = `
       onChange={[Function]}
       onFocus={[Function]}
       required={true}
-      type="number"
+      type="text"
       value={0}
     />
     <div
@@ -295,7 +295,7 @@ exports[`NumberField act correctly 5`] = `
       onChange={[Function]}
       onFocus={[Function]}
       required={true}
-      type="number"
+      type="text"
       value={0}
     />
     <div

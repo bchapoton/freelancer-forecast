@@ -39,7 +39,7 @@ export function NumberField({
     const dispatch = useAppDispatch();
     const numberDefaultValue: number | '' = defaultValue === undefined ? '' : defaultValue;
     const [internalValue, setInternalValue] = useState<number | ''>(numberDefaultValue);
-    const inputRef = useRef<typeof TextField>();
+    const inputRef = useRef<HTMLTextAreaElement | HTMLInputElement>();
 
     const onChangeHandler = useCallback(
         (event: ChangeEvent<HTMLInputElement>) => {
@@ -67,7 +67,7 @@ export function NumberField({
 
     const onKeyDownHandler = useCallback((event: KeyboardEvent<HTMLDivElement>) => {
         if (event.key === 'Enter') {
-            event.currentTarget.blur();
+            inputRef.current?.blur();
         }
     }, []);
 
@@ -85,7 +85,6 @@ export function NumberField({
             variant="outlined"
             margin="normal"
             required
-            type="number"
             fullWidth
             onChange={onChangeHandler}
             onBlur={onBlurHandler}
