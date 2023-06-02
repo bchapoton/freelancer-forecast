@@ -1,14 +1,15 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { store } from '../../redux/store';
+import { storeConfigurator } from '../../redux/store';
 import { Provider } from 'react-redux';
 import ThemeWrapper from '../ThemeWrapper';
 import YearSummary from './YearSummary';
+import { TestHelper } from '../../helpers/TestHelper';
 
 it('Year summary renders correctly', () => {
     const tree = renderer
         .create(
-            <Provider store={store}>
+            <Provider store={storeConfigurator(TestHelper.initTestingStore())}>
                 <ThemeWrapper>
                     <YearSummary />
                 </ThemeWrapper>

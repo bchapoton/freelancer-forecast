@@ -20,7 +20,7 @@ export interface ParametersState {
 export const initialState: ParametersState = {
     selectedMonths: MonthsArray,
     averageDailyRate: 650,
-    year: 2022,
+    year: new Date().getFullYear(),
     vatRate: 20,
     taxAllowance: 34,
     socialContribution: [
